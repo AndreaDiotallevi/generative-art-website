@@ -16,8 +16,8 @@ describe('Navbar', () => {
 
   it('should render home and about buttons', () => {
     const wrapper = shallow(<Navbar />);
-    const homeBtn = wrapper.find("[data-test='navbar-home-btn']");
-    const aboutBtn = wrapper.find("[data-test='navbar-about-btn']");
+    const homeBtn = wrapper.find("[data-test='navbar-home navbar-btn']");
+    const aboutBtn = wrapper.find("[data-test='navbar-about navbar-btn']");
     expect(homeBtn.text()).toEqual('home');
     expect(aboutBtn.text()).toEqual('about');
   })

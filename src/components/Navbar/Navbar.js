@@ -8,8 +8,8 @@ class Navbar extends Component {
           <h1 data-test='navbar-title'>ANDREA DIOTALLEVI</h1>
         </div>
         <div className='navbar-right'>
-          <p data-test='navbar-home-btn'>home</p>
-          <p data-test='navbar-about-btn'>about</p>
+          <p data-test='navbar-home navbar-btn'>home</p>
+          <p data-test='navbar-about navbar-btn'>about</p>
         </div>
       </div>
     )
