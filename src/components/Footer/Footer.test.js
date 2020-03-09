@@ -8,9 +8,9 @@ describe('Footer', () => {
     expect(wrapper.exists()) === true
   })
 
-  // it('should render Andrea Diotallevi 2020', () => {
-  //   const wrapper = shallow(<Footer />);
-  //   const h1 = wrapper.find("[data-test='navbar-title']");
-  //   expect(h1.text()).toEqual('ANDREA DIOTALLEVI');
-  // })
+  it('should render Andrea Diotallevi 2020', () => {
+    const wrapper = shallow(<Footer />);
+    const p = wrapper.find("[data-test='footer-licence']");
+    expect(p.text()).toEqual('Andrea Diotallevi 2020');
+  })
 })
