@@ -4,7 +4,13 @@ class Navbar extends Component {
   render() {
     return (
       <div className='navbar-component'>
-        <h1 data-test='navbar-title'>Andrea Diotallevi</h1>
+        <div className='navbar-left'>
+          <h1 data-test='navbar-title'>ANDREA DIOTALLEVI</h1>
+        </div>
+        <div className='navbar-right'>
+          <p data-test='navbar-home-btn'>home</p>
+          <p data-test='navbar-about-btn'>about</p>
+        </div>
       </div>
     )
   }
