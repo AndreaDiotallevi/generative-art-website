@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 class Navbar extends Component {
   render() {
     return (
-      <div></div>
+      <div className='navbar-component'>
+        <h1 data-test='navbar-title'>Andrea Diotallevi</h1>
+      </div>
     )
   }
 }
