@@ -41,6 +41,10 @@
   color: rgb(61, 66, 70);
 }
 
+.navbar-link:hover {
+  text-decoration: underline;
+}
+
 #navbar-title {
   font-weight: 500;
   font-size: 26px;

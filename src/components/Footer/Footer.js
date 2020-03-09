@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import copyrightLogo from '../../images/copyright-logo.png';
-import InstagramLogo from '../../images/instagram-logo.png';
+import copyrightLogo from '../../images//icons/copyright-logo.png';
+import InstagramLogo from '../../images/icons/instagram-logo.png';
 
 class Footer extends Component {
   render() {
