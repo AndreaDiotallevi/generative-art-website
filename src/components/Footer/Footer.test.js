@@ -10,7 +10,7 @@ describe('Footer', () => {
 
   it('should render Andrea Diotallevi 2020', () => {
     const wrapper = shallow(<Footer />);
-    const p = wrapper.find("[data-test='footer-licence']");
+    const p = wrapper.find({ id: "footer-copyright"});
     expect(p.text()).toEqual('Andrea Diotallevi 2020');
   })
 })

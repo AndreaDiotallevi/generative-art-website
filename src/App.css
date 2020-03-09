@@ -6,7 +6,7 @@
   padding: 0;
 }
 
-#root, .app {
+.app {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -17,6 +17,8 @@
   left: 0;
 }
 
+/* Navbar */
+
 .navbar-component {
   display: flex;
   justify-content: space-between;
@@ -26,7 +28,7 @@
   padding: 0 200px;
 }
 
-.navbar-right, .footer-left {
+.navbar-right {
   display: flex;
   align-items: center;
 }
@@ -41,6 +43,26 @@ h1 {
   font-size: 26px;
 }
 
-#copyright-logo {
+/* Footer */
+
+.footer-component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 200px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+#copyright-logo, #instagram-logo {
   height: 15px;
+}
+
+#footer-copyright {
+  font-size: 15px;
+  margin-left: 5px;
 }
