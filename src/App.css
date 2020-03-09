@@ -2,19 +2,26 @@
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
   font-size: 17px;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-component {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  border-bottom: 1px solid rgb(132, 132, 132, 0.2);
+  padding: 0 200px;
 }
 
 .navbar-right {
   display: flex;
 }
 
-.navbar-btn {
+.navbar-link {
   margin-left: 25px;
+  text-decoration: none;
 }
 
 h1 {

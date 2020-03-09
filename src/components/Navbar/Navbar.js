@@ -10,10 +10,10 @@ class Navbar extends Component {
         </div>
         <div className='navbar-right'>
           <Link to='/'>
-            <p className='navbar-btn' data-test='navbar-home'>home</p>
+            <p className='navbar-link' data-test='navbar-home'>home</p>
           </Link>
           <Link to='/about'>
-            <p className='navbar-btn' data-test='navbar-about'>about</p>
+            <p className='navbar-link' data-test='navbar-about'>about</p>
           </Link>
         </div>
       </div>
