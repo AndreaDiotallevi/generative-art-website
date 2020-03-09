@@ -6,7 +6,7 @@ import InstagramLogo from '../../images/instagram-logo.png';
 class Footer extends Component {
   render() {
     return (
-      <div className='footer-component'>
+      <div id='footer-component'>
         <div className='footer-left'>
           <img id='copyright-logo' src={copyrightLogo}></img>
           <p id='footer-copyright'>Andrea Diotallevi 2020</p>

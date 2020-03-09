@@ -21,7 +21,7 @@
 
 /* Navbar */
 
-.navbar-component {
+#navbar-component {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,7 +41,7 @@
   color: rgb(61, 66, 70);
 }
 
-h1 {
+#navbar-title {
   font-weight: 500;
   font-size: 26px;
   color: rgb(61, 66, 70);
@@ -49,7 +49,7 @@ h1 {
 
 /* Footer */
 
-.footer-component {
+#footer-component {
   display: flex;
   justify-content: space-between;
   align-items: center;
