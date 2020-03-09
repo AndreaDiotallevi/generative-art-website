@@ -9,10 +9,6 @@ describe('Navbar', () => {
     wrapper = shallow(<Navbar />);
   })
 
-  it('should render without errors', () => {
-    expect(wrapper.exists()) === true
-  })
-
   it('should render ANDREA DIOTALLEVI', () => {
     const h1 = wrapper.find({ id: 'navbar-title' });
     expect(h1.text()).toEqual('ANDREA DIOTALLEVI');

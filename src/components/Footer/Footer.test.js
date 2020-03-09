@@ -9,10 +9,6 @@ describe('Footer', () => {
     wrapper = shallow(<Footer />);
   })
 
-  it('should render without errors', () => {
-    expect(wrapper.exists()) === true
-  })
-
   it('should render the copyright logo', () => {
     const img = wrapper.find({ id: 'copyright-logo'});
     expect(img.props().src).toEqual('copyright-logo.png');
