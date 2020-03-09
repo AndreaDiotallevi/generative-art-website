@@ -13,6 +13,10 @@
   display: flex;
 }
 
+.navbar-btn {
+  margin-left: 25px;
+}
+
 h1 {
   font-weight: 500;
   font-size: 26px;

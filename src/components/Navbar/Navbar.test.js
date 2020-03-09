@@ -14,11 +14,11 @@ describe('Navbar', () => {
     expect(h1.text()).toEqual('ANDREA DIOTALLEVI');
   })
 
-  it('should render home and about buttons', () => {
+  it('should render home and about navbar links', () => {
     const wrapper = shallow(<Navbar />);
-    const homeBtn = wrapper.find("[data-test='navbar-home navbar-btn']");
-    const aboutBtn = wrapper.find("[data-test='navbar-about navbar-btn']");
-    expect(homeBtn.text()).toEqual('home');
-    expect(aboutBtn.text()).toEqual('about');
+    const homeLink = wrapper.find("[data-test='navbar-home']");
+    const aboutLink = wrapper.find("[data-test='navbar-about']");
+    expect(homeLink.text()).toEqual('home');
+    expect(aboutLink.text()).toEqual('about');
   })
 })
