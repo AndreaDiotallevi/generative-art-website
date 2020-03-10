@@ -8,7 +8,7 @@ import './App.css';
 
 function App() {
   return (
-    <div id="app">
+    <div className="app">
       <BrowserRouter>
         <Navbar />
         <Route path='/' exact component={Artworks}></Route>
