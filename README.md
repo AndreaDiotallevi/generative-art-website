@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/AndreaDiotallevi/website.svg?style=shield)](https://circleci.com/gh/AndreaDiotallevi/website) [![Test Coverage](https://api.codeclimate.com/v1/badges/5c59bd9060d52a0a8f65/test_coverage)](https://codeclimate.com/github/AndreaDiotallevi/website/test_coverage)
+[![CircleCI](https://circleci.com/gh/AndreaDiotallevi/website.svg?style=shield)](https://circleci.com/gh/AndreaDiotallevi/andreadiotallevi.com) [![Test Coverage](https://api.codeclimate.com/v1/badges/3da069d854d6c628e1b1/test_coverage)](https://codeclimate.com/github/AndreaDiotallevi/andreadiotallevi.com/test_coverage)
 
 # My Generative Art Website
 
