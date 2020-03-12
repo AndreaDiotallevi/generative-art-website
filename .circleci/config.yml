@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     environment:
-      CC_TEST_REPORTER_ID: 8c11c9418077555ffc19f204eee41422dbabe6d1955b8484826bcb0db0ddaa5b
+      CC_TEST_REPORTER_ID: ee18b7561a1fbcb5fea23a621014713b16b2023063721ce6fdc990cee214f88d
     docker:
       - image: circleci/node:8
     steps:
