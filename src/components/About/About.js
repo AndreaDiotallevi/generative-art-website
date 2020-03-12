@@ -7,7 +7,7 @@ class About extends Component {
       <div id='about-component'>
         <div id='about-container'>
           <div>
-            <img id='profile-image' src={staggeredPortrait} alt='profile image'></img>
+            <img id='profile-image' src={staggeredPortrait} alt='profile'></img>
           </div>
           <div>
             <h3 id='about-title'>about</h3>
