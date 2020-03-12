@@ -11,6 +11,7 @@ This is a React single page application, showcasing my [generative art](https://
 ## Getting Started
 
 * Clone this repository and change into it
+* Make sure you have [Node.js](https://nodejs.org/en/download/) installed
 * Install all the dependencies with ```npm install```
 
 ## How to Run the Tests
