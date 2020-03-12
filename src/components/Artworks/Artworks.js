@@ -27,7 +27,7 @@ class Artworks extends Component {
         <ul id='artworks-container'>
           {this.state.artworks.map((artwork, index) => (
           <li key={index}>
-            <img id={`artwork-image-${index}`} className='artwork-image' src={artwork.imageUrl}></img>
+            <img id={`artwork-image-${index}`} className='artwork-image' src={artwork.imageUrl} alt={artwork.title}></img>
             <p id={`artwork-title-${index}`} className='artwork-title'>{artwork.title}</p>
           </li>
           ))}
