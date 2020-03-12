@@ -46,7 +46,7 @@ jobs:
           name: Build
           command: npm run build
       - persist_to_workspace:
-          root: ./
+          root: /home/circleci/andreadiotallevi.com
           paths:
             - public
 
@@ -55,7 +55,7 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: ./
+          at: /home/circleci/andreadiotallevi.com
       - <<: *restore_cache
       - <<: *install_node_modules
       - run:
@@ -63,7 +63,7 @@ jobs:
           command: sudo npm install -g --silent netlify-cli
       - run:
           name: Deploy to Netlify
-          command: netlify deploy --dir=./public -p
+          command: netlify deploy --prod --dir=/home/circleci/andreadiotallevi.com/build --auth=$NETLIFY_AUTH_TOKEN --site=$NETLIFY_SITE_ID
 
 workflows:
   version: 2
