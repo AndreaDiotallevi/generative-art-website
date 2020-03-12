@@ -35,4 +35,3 @@ Start the local server with ```npm start```
 ## Continuous Integration
 
 [CircleCI](https://circleci.com/): tool for automating the development process quickly, safely, and at scale
-
