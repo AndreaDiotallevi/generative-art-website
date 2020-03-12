@@ -1,30 +1,85 @@
-version: 2
-jobs:
-  build:
-    environment:
-      CC_TEST_REPORTER_ID: ee18b7561a1fbcb5fea23a621014713b16b2023063721ce6fdc990cee214f88d
+executors:
+  node:
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:10
+
+aliases:
+  restore_cache: &restore_cache
+    restore_cache:
+      name: Restore Npm Package Cache
+      keys:
+        - v{{ .Environment.versionCache }}-deps-{{ .Branch }}-{{ checksum "package-lock.json" }}-{{ checksum ".circleci/config.yml" }}
+
+  install_node_modules: &install_node_modules
+    run:
+      name: Install dependencies
+      command: npm install
+
+  save_cache: &save_cache
+    save_cache:
+      name: Save NPM package cache
+      key: v{{ .Environment.versionCache }}-deps-{{ .Branch }}-{{ checksum "package-lock.json" }}-{{ checksum ".circleci/config.yml" }}
+      paths:
+        - ./node_modules
+
+version: 2.1
+
+jobs:
+  test:
+    executor: node
     steps:
       - checkout
-      - restore_cache: # special step to restore the dependency cache
-          key: dependency-cache-{{ checksum "package.json" }}
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *save_cache
       - run:
-          name: Setup Dependencies
-          command: npm install
+          name: Test
+          command: npm test
+
+  build:
+    executor: node
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
       - run:
-          name: Setup Code Climate test-reporter
-          command: |
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-            chmod +x ./cc-test-reporter
-      - save_cache: # special step to save the dependency cache
-          key: dependency-cache-{{ checksum "package.json" }}
+          name: Build
+          command: npm run build
+      - persist_to_workspace:
+          root: ./
           paths:
-            - ./node_modules
-      - run: # run tests
-          name: Run Test and Coverage
-          command: |
-            ./cc-test-reporter before-build
-            npm test -- --coverage
-            ./cc-test-reporter after-build --exit-code $?
-            
+            - public
+
+  deploy:
+    executor: node
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ./
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - run:
+          name: Install netlify-cli
+          command: sudo npm install -g --silent netlify-cli
+      - run:
+          name: Deploy to Netlify
+          command: netlify deploy --dir=./public -p
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - test:
+          filters:
+            branches:
+              ignore:
+                - gh-pages
+      - build:
+          requires:
+            - test
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
