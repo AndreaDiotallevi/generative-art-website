@@ -8,17 +8,17 @@ aliases:
     restore_cache:
       name: Restore Npm Package Cache
       keys:
-        - yarn-cache-netlify-{{ checksum "yarn.lock" }}
+        - v{{ .Environment.versionCache }}-deps-{{ .Branch }}-{{ checksum "package-lock.json" }}-{{ checksum ".circleci/config.yml" }}
 
   install_node_modules: &install_node_modules
     run:
       name: Install dependencies
-      command: yarn
+      command: npm install
 
   save_cache: &save_cache
     save_cache:
       name: Save NPM package cache
-      key: yarn-cache-netlify-{{ checksum "yarn.lock" }}
+      key: v{{ .Environment.versionCache }}-deps-{{ .Branch }}-{{ checksum "package-lock.json" }}-{{ checksum ".circleci/config.yml" }}
       paths:
         - ./node_modules
 
@@ -34,7 +34,7 @@ jobs:
       - <<: *save_cache
       - run:
           name: Test
-          command: yarn test
+          command: npm test
 
   build:
     executor: node
@@ -44,7 +44,7 @@ jobs:
       - <<: *install_node_modules
       - run:
           name: Build
-          command: yarn build
+          command: npm run build
       - persist_to_workspace:
           root: ./
           paths:
