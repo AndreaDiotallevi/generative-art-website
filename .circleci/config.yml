@@ -1,7 +1,7 @@
 executors:
   node:
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:10
 
 aliases:
   restore_cache: &restore_cache
@@ -46,7 +46,7 @@ jobs:
           name: Build
           command: npm run build
       - persist_to_workspace:
-          root: /home/circleci/project
+          root: ./
           paths:
             - public
 
@@ -55,15 +55,15 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: /home/circleci/project/
+          at: ./
       - <<: *restore_cache
       - <<: *install_node_modules
       - run:
           name: Install netlify-cli
           command: sudo npm install -g --silent netlify-cli
-      - run: 
+      - run:
           name: Deploy to Netlify
-          command: netlify deploy --dir=/home/circleci/project/public -p
+          command: netlify deploy --dir=./public -p
 
 workflows:
   version: 2
