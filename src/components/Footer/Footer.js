@@ -12,7 +12,7 @@ class Footer extends Component {
             <p id='footer-copyright'>Andrea Diotallevi 2020</p>
           </div>
           <div className='footer-right'>
-            <a href='https://www.instagram.com/andreadiotalleviart/' target="_blank" id='instagram-hyperlink'><img id='instagram-logo' src={instagramLogo} alt='instagram'></img></a>
+            <a href='https://www.instagram.com/andreadiotalleviart/' target="_blank" rel="noopener noreferrer" id='instagram-hyperlink'><img id='instagram-logo' src={instagramLogo} alt='instagram'></img></a>
           </div>
         </div>
       </div>
