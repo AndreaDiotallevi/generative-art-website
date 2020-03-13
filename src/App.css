@@ -32,7 +32,7 @@ p, h1, h2, h3, h4 {
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid rgb(132, 132, 132, 0.2);
-  margin-bottom: 70px;
+  margin-bottom: 120px;
 }
 
 #navbar-container {
@@ -99,7 +99,6 @@ p, h1, h2, h3, h4 {
 #artworks-component {
   display: flex;
   justify-content: center;
-  margin-top: 70px;
 }
 
 #artworks-container {
@@ -146,21 +145,25 @@ p, h1, h2, h3, h4 {
   margin-bottom: 25px;
 }
 
+.about-description {
+  margin-bottom: 10px;
+}
+
 /* Media Queries */
 
 @media (max-width: 1090px) {
-	#navbar-container, #artworks-container, #footer-container {
+	#navbar-container, #artworks-container, #footer-container, #about-container {
 		width: 660px;
 	}
 }
 
 @media (max-width: 740px) {
-	#navbar-container, #artworks-container, #footer-container {
+	#navbar-container, #artworks-container, #footer-container, #about-container {
 		width: 88vw;
   }
 
   #navbar-component {
-    margin-bottom: 9.46vw;
+    margin-bottom: 16.21vw;
   }
   
   .artwork-image {
@@ -171,22 +174,26 @@ p, h1, h2, h3, h4 {
   .artwork-title {
     margin-bottom: 9.45vw;
   }
+
+  #profile-image {
+    height: 41vw;
+  }
 }
 
 @media (max-width: 500px) {
-  .artwork-title {
+  .artwork-title, #about-description {
     font-size: 16px;
   }
 }
 
 @media (max-width: 400px) {
-  .artwork-title {
+  .artwork-title, #about-description {
     font-size: 15px;
   }
 }
 
 @media (max-width: 300px) {
-  .artwork-title {
+  .artwork-title, #about-description {
     font-size: 14px;
   }
 }
