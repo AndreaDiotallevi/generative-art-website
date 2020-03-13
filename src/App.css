@@ -8,6 +8,7 @@
 
 p, h1, h2, h3, h4 {
   color: rgb(61, 66, 70);
+  color: black;
 }
 
 #root {
@@ -55,6 +56,10 @@ p, h1, h2, h3, h4 {
 
 .navbar-link:hover {
   text-decoration: underline;
+}
+
+.navbar-text {
+  text-decoration: none;
 }
 
 #navbar-title {
@@ -117,6 +122,7 @@ p, h1, h2, h3, h4 {
 
 .artwork-title {
   margin-bottom: 70px;
+  text-align: center;
 }
 
 /* About */
@@ -137,16 +143,18 @@ p, h1, h2, h3, h4 {
   height: 310px;
   margin-right: 50px;
   box-shadow: 2px -2px 10px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 45px;
 }
 
 #about-title {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 26px;
   margin-bottom: 25px;
 }
 
 .about-description {
   margin-bottom: 10px;
+  font-size: 15px;
 }
 
 /* Media Queries */
@@ -180,20 +188,74 @@ p, h1, h2, h3, h4 {
   }
 }
 
+@media (max-width: 600px) {
+  #about-container {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 500px) {
-  .artwork-title, #about-description {
+  .artwork-title, #about-description, .navbar-text {
     font-size: 16px;
+  }
+
+  .navbar-link {
+    margin-left: 20px;
+  }
+
+  #navbar-title, #about-title {
+    font-size: 24px;
+  }
+
+  #about-title {
+    margin-bottom: 23px;
+  }
+
+  .about-description {
+    font-size: 14px;
   }
 }
 
 @media (max-width: 400px) {
-  .artwork-title, #about-description {
+  .artwork-title, #about-description, .navbar-text {
     font-size: 15px;
+  }
+
+  .navbar-link {
+    margin-left: 15px;
+  }
+
+  #navbar-title, #about-title {
+    font-size: 22px;
+  }
+
+  #about-title {
+    margin-bottom: 21px;
+  }
+
+  .about-description {
+    font-size: 13px;
   }
 }
 
 @media (max-width: 300px) {
-  .artwork-title, #about-description {
+  .artwork-title, #about-description, .navbar-text {
     font-size: 14px;
+  }
+
+  .navbar-link {
+    margin-left: 10px;
+  }
+
+  #navbar-title, #about-title {
+    font-size: 20px;
+  }
+
+  #about-title {
+    margin-bottom: 19px;
+  }
+
+  .about-description {
+    font-size: 12px;
   }
 }
