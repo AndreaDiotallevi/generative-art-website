@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import copyrightLogo from '../../images//icons/copyright-logo.png';
-import instagramLogo from '../../images/icons/instagram-logo.png';
+import copyrightLogo from '../../assets//icons/copyright-logo.png';
+import instagramLogo from '../../assets/icons/instagram-logo.png';
 
 class Footer extends Component {
   render() {
@@ -12,7 +12,7 @@ class Footer extends Component {
             <p id='footer-copyright'>Andrea Diotallevi 2020</p>
           </div>
           <div className='footer-right'>
-            <img id='instagram-logo' src={instagramLogo} alt='instagram'></img>
+            <a href='https://www.instagram.com/andreadiotalleviart/' target="_blank" id='instagram-hyperlink'><img id='instagram-logo' src={instagramLogo} alt='instagram'></img></a>
           </div>
         </div>
       </div>

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import agateStoneImage from '../../images/artworks/agate-stone-750x750.png';
-import marbleLakeImage from '../../images/artworks/marble-lake-750x750.png';
-import fluidImage from '../../images/artworks/fluid-750x750.png';
-import daisyImage from '../../images/artworks/daisy-750x750.png';
-import whiteCherryImage from '../../images/artworks/white-cherry-750x750.png';
-import blackHoleImage from '../../images/artworks/black-hole-750x750.png';
+import agateStoneImage from '../../assets/artworks/agate-stone-750x750.png';
+import marbleLakeImage from '../../assets/artworks/marble-lake-750x750.png';
+import fluidImage from '../../assets/artworks/fluid-750x750.png';
+import daisyImage from '../../assets/artworks/daisy-750x750.png';
+import whiteCherryImage from '../../assets/artworks/white-cherry-750x750.png';
+import blackHoleImage from '../../assets/artworks/black-hole-750x750.png';
 
 class Artworks extends Component {
   constructor(props) {

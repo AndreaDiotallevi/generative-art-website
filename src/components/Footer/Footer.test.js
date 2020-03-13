@@ -19,8 +19,10 @@ describe('Footer', () => {
     expect(p.text()).toEqual('Andrea Diotallevi 2020');
   })
 
-  it('should render the instagram logo', () => {
+  it('should render the instagram logo with hyperlink', () => {
+    const a = wrapper.find({ id: 'instagram-hyperlink' })
     const img = wrapper.find({ id: 'instagram-logo'});
+    expect(a.props().href).toEqual('https://www.instagram.com/andreadiotalleviart/')
     expect(img.props().src).toEqual('instagram-logo.png');
   })
 })

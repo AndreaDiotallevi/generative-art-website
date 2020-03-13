@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import staggeredPortrait from '../../images/artworks/staggered-portrait.png';
+import staggeredPortrait from '../../assets/artworks/staggered-portrait.png';
 
 class About extends Component {
   render() {
