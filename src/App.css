@@ -149,6 +149,7 @@ p, h1, h2, h3, h4 {
 #artwork-container {
   display: flex;
   width: 1010px;
+  margin-bottom: 100px;
 }
 
 .artwork-image {
@@ -217,7 +218,7 @@ p, h1, h2, h3, h4 {
 		width: 88vw;
   }
 
-  #navbar-component {
+  #navbar-component, #artwork-container {
     margin-bottom: 16.21vw;
   }
 
