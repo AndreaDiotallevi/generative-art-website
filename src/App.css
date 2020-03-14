@@ -104,6 +104,11 @@ p, h1, h2, h3, h4 {
   align-items: center;
 }
 
+.icon__fallback-text {
+  visibility: hidden;
+  font-size: 1px;
+}
+
 /* Artworks */
 
 #artworks-component {
