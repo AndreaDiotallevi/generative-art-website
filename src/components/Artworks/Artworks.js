@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { LazyImage } from "../LazyImage/LazyImage";
 import agateStoneImage from '../../assets/artworks/agate-stone-750x750.png';
 import marbleLakeImage from '../../assets/artworks/marble-lake-750x750.png';
 import fluidImage from '../../assets/artworks/fluid-750x750.png';
@@ -26,9 +28,11 @@ class Artworks extends Component {
       <div id='artworks-component'>
         <ul id='artworks-container'>
           {this.state.artworks.map((artwork, index) => (
-          <li key={index}>
-            <img id={`artwork-image-${index}`} className='artwork-image' src={artwork.imageUrl} alt={artwork.title}></img>
-            <p id={`artwork-title-${index}`} className='artwork-title'>{artwork.title}</p>
+          <li className='artwork' key={index}>
+            <Link to={`/artworks/${artwork.title.replace(' ', '-')}`} className='artwork-link'>
+              <LazyImage id={`artwork-image-${index}`} className='artwork-image' key={index} src={artwork.imageUrl} alt="placeholder"/>
+              <p id={`artwork-title-${index}`} className='artwork-title'>{artwork.title}</p>
+            </Link>
           </li>
           ))}
         </ul>
