@@ -1,5 +1,5 @@
 import React from 'react';
-import staggeredPortrait from '../../assets/artworks/staggered-portrait.png';
+import staggeredPortrait from '../../assets/staggered-portrait.png';
 
 function About() {
   return (

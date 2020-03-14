@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import agateStoneImage from '../../assets/artworks/agate-stone-750x750.png';
-import marbleLakeImage from '../../assets/artworks/marble-lake-750x750.png';
-import fluidImage from '../../assets/artworks/fluid-750x750.png';
-import daisyImage from '../../assets/artworks/daisy-750x750.png';
-import whiteCherryImage from '../../assets/artworks/white-cherry-750x750.png';
-import blackHoleImage from '../../assets/artworks/black-hole-750x750.png';
+import agateStoneImage from '../../assets/agate-stone-750x750.png';
+import marbleLakeImage from '../../assets/marble-lake-750x750.png';
+import fluidImage from '../../assets/fluid-750x750.png';
+import daisyImage from '../../assets/daisy-750x750.png';
+import whiteCherryImage from '../../assets/white-cherry-750x750.png';
+import blackHoleImage from '../../assets/black-hole-750x750.png';
 
 class Artworks extends Component {
   constructor(props) {
