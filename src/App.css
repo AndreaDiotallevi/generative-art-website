@@ -33,7 +33,7 @@ p, h1, h2, h3, h4 {
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid rgb(132, 132, 132, 0.2);
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 }
 
 #navbar-container {
@@ -99,6 +99,11 @@ p, h1, h2, h3, h4 {
   font-size: 15px;
 }
 
+#instagram-hyperlink {
+  display: flex;
+  align-items: center;
+}
+
 /* Artworks */
 
 #artworks-component {
@@ -114,15 +119,48 @@ p, h1, h2, h3, h4 {
   width: 1010px;
 }
 
+.artwork-title {
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.artwork:hover {
+  opacity: 0.9;
+}
+
+.artwork-link {
+  text-decoration: none;
+}
+
+/* Artwork */
+
+#artwork-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: auto;
+}
+
+#artwork-container {
+  display: flex;
+  width: 1010px;
+}
+
 .artwork-image {
   height: 310px;
   box-shadow: 2px -2px 10px 0 rgba(0, 0, 0, 0.2);
   margin-bottom: 15px;
 }
 
-.artwork-title {
-  margin-bottom: 70px;
-  text-align: center;
+.artwork-page-image {
+  height: 550px;
+  margin-right: 40px;
+}
+
+#artwork-page-title {
+  font-weight: 500;
+  font-size: 26px;
+  margin-bottom: 25px;
 }
 
 /* About */
@@ -160,20 +198,24 @@ p, h1, h2, h3, h4 {
 /* Media Queries */
 
 @media (max-width: 1090px) {
-	#navbar-container, #artworks-container, #footer-container, #about-container {
+	#navbar-container, #artworks-container, #footer-container, #about-container, #artwork-container {
 		width: 660px;
-	}
+  }
+  
+  .artwork-page-image {
+    height: 359px;
+  }
 }
 
 @media (max-width: 740px) {
-	#navbar-container, #artworks-container, #footer-container, #about-container {
+	#navbar-container, #artworks-container, #footer-container, #about-container, #artwork-container {
 		width: 88vw;
   }
 
   #navbar-component {
     margin-bottom: 16.21vw;
   }
-  
+
   .artwork-image {
     height: 41vw;
     margin-bottom: 2.02vw;
@@ -185,6 +227,15 @@ p, h1, h2, h3, h4 {
 
   #profile-image {
     height: 41vw;
+  }
+
+  #artwork-container {
+    flex-direction: column-reverse;
+  }
+
+  .artwork-page-image {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -203,15 +254,15 @@ p, h1, h2, h3, h4 {
     margin-left: 20px;
   }
 
-  #navbar-title, #about-title {
+  #navbar-title, #about-title, #artwork-page-title {
     font-size: 24px;
   }
 
-  #about-title {
+  #about-title, #artwork-page-title {
     margin-bottom: 23px;
   }
 
-  .about-description {
+  .about-description, #footer-copyright {
     font-size: 14px;
   }
 }
@@ -225,15 +276,15 @@ p, h1, h2, h3, h4 {
     margin-left: 15px;
   }
 
-  #navbar-title, #about-title {
+  #navbar-title, #about-title, #artwork-page-title {
     font-size: 22px;
   }
 
-  #about-title {
+  #about-title, #artwork-page-title {
     margin-bottom: 21px;
   }
 
-  .about-description {
+  .about-description, #footer-copyright {
     font-size: 13px;
   }
 }
@@ -247,15 +298,15 @@ p, h1, h2, h3, h4 {
     margin-left: 10px;
   }
 
-  #navbar-title, #about-title {
+  #navbar-title, #about-title, #artwork-page-title {
     font-size: 20px;
   }
 
-  #about-title {
+  #about-title, #artwork-page-title {
     margin-bottom: 19px;
   }
 
-  .about-description {
+  .about-description, #footer-copyright {
     font-size: 12px;
   }
 }

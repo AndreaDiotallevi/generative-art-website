@@ -34,7 +34,7 @@ jobs:
       - <<: *save_cache
       - run:
           name: Test
-          command: npm test
+          command: npm test -- --coverage
 
   build:
     executor: node
