@@ -9,20 +9,13 @@ describe('Footer', () => {
     wrapper = shallow(<Footer />);
   })
 
-  it('should render the copyright logo', () => {
-    const img = wrapper.find({ id: 'copyright-logo'});
-    expect(img.props().src).toEqual('copyright-logo.png');
-  })
-
   it('should render Andrea Diotallevi 2020', () => {
     const p = wrapper.find({ id: 'footer-copyright'});
-    expect(p.text()).toEqual('Andrea Diotallevi 2020');
+    expect(p.text()).toEqual('© 2020, Andrea Diotallevi');
   })
 
   it('should render the instagram logo with hyperlink', () => {
     const a = wrapper.find({ id: 'instagram-hyperlink' })
-    const img = wrapper.find({ id: 'instagram-logo'});
     expect(a.props().href).toEqual('https://www.instagram.com/andreadiotalleviart/')
-    expect(img.props().src).toEqual('instagram-logo.png');
   })
 })
