@@ -9,20 +9,13 @@ const Image = styled.img`
   width: 310px;
   box-shadow: 2px -2px 10px 0 rgba(0, 0, 0, 0.2);
   margin-bottom: 15px;
+  
   @media (max-width: 740px) {
     height: 41vw;
     width: 41vw;
     margin-bottom: 2.02vw;
   }
-  // Add a smooth animation on loading
-  @keyframes loaded {
-    0% { opacity: 0.1 }
-    100% { opacity: 1 }
-  }
-  // I use utilitary classes instead of props to avoid style regenerating
-  &.loaded:not(.has-error) {
-    animation: loaded 300ms ease-in-out;
-  }
+  
   &.has-error {
     // fallback to placeholder image on error
     content: url(${placeHolder});
