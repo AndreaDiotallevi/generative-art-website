@@ -9,7 +9,7 @@ function Artworks() {
         {artworks.map((artwork) => (
         <li className='artwork' key={artwork.id}>
           <Link to={`/artworks/${artwork.title.replace(' ', '-')}`} className='artwork-link'>
-            <img id={`artwork-image-${artwork.id}`} className='artwork-image' src={require(`../../assets/${artwork.title.replace(' ', '-')}-750x750.png`)} alt={artwork.title}></img>
+            <img id={`artwork-image-${artwork.id}`} className='artwork-image' src={require(`../../assets/${artwork.title.replace(' ', '-')}.png`)} alt={artwork.title}></img>
             <p id={`artwork-title-${artwork.id}`} className='artwork-title'>{artwork.title}</p>
           </Link>
         </li>
