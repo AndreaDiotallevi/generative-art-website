@@ -2,11 +2,15 @@
 
 # My Generative Art Website
 
-[Description](#description) | [Getting Started](#getting-started) | [How to Run the Tests](#how-to-run-the-tests) | [How to Run the App](#how-to-run-the-app) | [Technologies Used](#technologies-used) | [Continuous Integration](#continuous-integration)
+[Description](#description) | [Live Website](#live-website) | [Getting Started](#getting-started) | [How to Run the Tests](#how-to-run-the-tests) | [How to Run the App](#how-to-run-the-app) | [Technologies Used](#technologies-used) | [Continuous Integration](#continuous-integration)
 
 ## Description
 
 This is a React single page application, showcasing my [generative art](https://github.com/AndreaDiotallevi/generative-art) experimentations.
+
+## Live Website
+
+The application is deployed with Netlify at my custom domain [www.andreadiotallevi.com](https://www.andreadiotallevi.com/).
 
 ## Getting Started
 
