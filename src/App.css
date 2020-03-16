@@ -1,7 +1,7 @@
 * {
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
-  font-size: 17px;
+  font-size: 18px;
   margin: 0;
   padding: 0;
 }
@@ -45,7 +45,7 @@ p, h1, h2, h3, h4 {
 }
 
 #home-page-title {
-  font-size: 36px;
+  font-size: 40px;
   margin-bottom: 15px;
   color: white;
 }
@@ -374,4 +374,8 @@ p, h1, h2, h3, h4 {
 
 .text-when-home {
   color: white;
+}
+
+.text-when-home:hover {
+  text-decoration-color: white;
 }
