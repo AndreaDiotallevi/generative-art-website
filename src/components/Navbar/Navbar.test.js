@@ -16,8 +16,6 @@ describe('Navbar', () => {
 
   it('should render home and about navbar links', () => {
     const homeLink = wrapper.find({ id: 'navbar-home' });
-    const aboutLink = wrapper.find({ id: 'navbar-about' });
     expect(homeLink.text()).toEqual('home');
-    expect(aboutLink.text()).toEqual('about');
   })
 })

@@ -37,7 +37,7 @@ class Moonlight extends React.Component {
     p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
     p5.noiseSeed(p5.random());
     p5.background(56, 68, 76);
-    p5.redraw();
+    p5.draw();
   }
  
   render() {

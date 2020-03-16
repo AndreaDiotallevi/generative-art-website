@@ -92,6 +92,7 @@ p, h1, h2, h3, h4 {
 
 .navbar-text {
   text-decoration: none;
+  color: black;
 }
 
 #navbar-title {

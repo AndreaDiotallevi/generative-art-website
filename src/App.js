@@ -19,7 +19,7 @@ class App extends React.Component {
   }
 
   isHome() {
-    return this.state.currentPage == 'home';
+    return this.state.currentPage === 'home';
   }
 
   handleChangePage = (e) => {
