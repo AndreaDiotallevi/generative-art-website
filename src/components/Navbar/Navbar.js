@@ -1,22 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Navbar() {
+function Navbar(props) {
+
+  function isHome() {
+    return props.currentPage == 'home';
+  }
+
   return (
-    <div id='navbar-component'>
+    <div className={`navbar-component ${isHome() && 'component-when-home'}`}>
       <div id='navbar-container'>
         <div className='navbar-left'>
-          <h1 id='navbar-title'>ANDREA DIOTALLEVI</h1>
+          <h1 id='navbar-title' className={isHome() && 'hidden'}>ANDREA DIOTALLEVI</h1>
         </div>
         <div className='navbar-right'>
-          <Link to='/' className='navbar-link'>
-            <p id='navbar-home' className='navbar-text'>Home</p>
+          <Link to='/' className='navbar-link' onClick={props.onClick}>
+            <p id='navbar-home' className={`navbar-text ${isHome() && 'text-when-home'}`}>Home</p>
           </Link>
-          <Link to='/artworks' className='navbar-link'>
-            <p id='navbar-artworks' className='navbar-text'>Artworks</p>
+          <Link to='/artworks' className='navbar-link' onClick={props.onClick}>
+            <p id='navbar-artworks' className={`navbar-text ${isHome() && 'text-when-home'}`}>Artworks</p>
           </Link>
-          <Link to='/about' className='navbar-link'>
-            <p id='navbar-about' className='navbar-text'>About</p>
+          <Link to='/about' className='navbar-link' onClick={props.onClick}>
+            <p id='navbar-about' className={`navbar-text ${isHome() && 'text-when-home'}`}>About</p>
           </Link>
         </div>
       </div>

@@ -45,7 +45,7 @@ p, h1, h2, h3, h4 {
 }
 
 #home-page-title {
-  font-size: 32px;
+  font-size: 36px;
   margin-bottom: 15px;
   color: white;
 }
@@ -60,12 +60,11 @@ p, h1, h2, h3, h4 {
 
 /* Navbar */
 
-#navbar-component {
+.navbar-component {
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid rgb(132, 132, 132, 0.2);
-  /* background-color: rgb(56, 68, 76); */
 }
 
 #navbar-container {
@@ -93,19 +92,21 @@ p, h1, h2, h3, h4 {
 
 .navbar-text {
   text-decoration: none;
-  /* color: white; */
 }
 
 #navbar-title {
   font-weight: 500;
   font-size: 26px;
   opacity: 0.8;
-  /* color: white; */
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 /* Footer */
 
-#footer-component {
+.footer-component {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,10 +129,9 @@ p, h1, h2, h3, h4 {
 #instagram-logo {
   height: 20px;
   opacity: 0.8;
-  opacity: 0;
 }
 
-#footer-copyright {
+.footer-copyright {
   font-size: 15px;
   margin-left: 5px;
   font-size: 15px;
@@ -365,4 +365,13 @@ p, h1, h2, h3, h4 {
   .about-description, #footer-copyright {
     font-size: 12px;
   }
+}
+
+.component-when-home {
+  background-color: rgb(56, 68, 76);
+  border-color: rgb(56, 68, 76);
+}
+
+.text-when-home {
+  color: white;
 }
