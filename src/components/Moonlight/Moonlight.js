@@ -6,21 +6,8 @@ class Moonlight extends React.Component {
 
   setup = (p5, canvasParentRef) => {
     let height = document.getElementById('home-container').offsetHeight;
-    console.log(height)
     p5.createCanvas(p5.windowWidth, height).parent(canvasParentRef);
     p5.background(56, 68, 76);
-
-    let h3 = p5.createDiv('Hello! My name is Andrea.');
-    h3.style('font-size', '32px');
-    h3.style('font-weight', '300');
-    h3.style('color', 'white');
-    h3.position(p5.windowWidth / 3, height / 2);
-
-    let p = p5.createDiv('I am a Software Engineer, with a background in music and architecture, fascinated by the intersection between art and technology.');
-    p.style('font-size', '17px');
-    p.style('font-weight', '300');
-    p.style('color', 'white');
-    p.position(p5.windowWidth / 3, height / 2 + 50);
   };
 
   draw = p5 => {
