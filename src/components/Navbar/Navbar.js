@@ -10,13 +10,13 @@ function Navbar() {
         </div>
         <div className='navbar-right'>
           <Link to='/' className='navbar-link'>
-            <p id='navbar-home' className='navbar-text'>home</p>
+            <p id='navbar-home' className='navbar-text'>Home</p>
           </Link>
           <Link to='/artworks' className='navbar-link'>
-            <p id='navbar-artworks' className='navbar-text'>artworks</p>
+            <p id='navbar-artworks' className='navbar-text'>Artworks</p>
           </Link>
           <Link to='/about' className='navbar-link'>
-            <p id='navbar-about' className='navbar-text'>about</p>
+            <p id='navbar-about' className='navbar-text'>About</p>
           </Link>
         </div>
       </div>
