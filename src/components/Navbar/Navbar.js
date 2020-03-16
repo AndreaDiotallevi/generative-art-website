@@ -12,6 +12,9 @@ function Navbar() {
           <Link to='/' className='navbar-link'>
             <p id='navbar-home' className='navbar-text'>home</p>
           </Link>
+          <Link to='/artworks' className='navbar-link'>
+            <p id='navbar-artworks' className='navbar-text'>artworks</p>
+          </Link>
           <Link to='/about' className='navbar-link'>
             <p id='navbar-about' className='navbar-text'>about</p>
           </Link>
