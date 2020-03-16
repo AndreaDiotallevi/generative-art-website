@@ -5,7 +5,7 @@ function Home() {
   return (
     <div id='home-component'>
       <div id='home-container'>
-        <Moonlight></Moonlight>
+        <Moonlight />
       </div>
     </div>
   )

@@ -28,16 +28,12 @@ p, h1, h2, h3, h4 {
 /* Home */
 
 #home-component {
-  display: flex;
-  justify-content: center;
-  margin-bottom: auto;
   height: 100%;
+  background-color: rgb(56, 68, 76);
 }
 
 #home-container {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  height: 100%;
 }
 
 #home-page-title {
@@ -46,14 +42,18 @@ p, h1, h2, h3, h4 {
   margin-bottom: 25px;
 }
 
+.p5Canvas {
+  height: 100%;
+}
+
 /* Navbar */
 
 #navbar-component {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border-bottom: 1px solid rgb(132, 132, 132, 0.2); */
-  background-color: rgb(56, 68, 76);
+  border-bottom: 1px solid rgb(132, 132, 132, 0.2);
+  /* background-color: rgb(56, 68, 76); */
 }
 
 #navbar-container {
@@ -81,14 +81,14 @@ p, h1, h2, h3, h4 {
 
 .navbar-text {
   text-decoration: none;
-  color: white;
+  /* color: white; */
 }
 
 #navbar-title {
   font-weight: 500;
   font-size: 26px;
-  /* opacity: 0.8; */
-  color: white;
+  opacity: 0.8;
+  /* color: white; */
 }
 
 /* Footer */
@@ -105,7 +105,7 @@ p, h1, h2, h3, h4 {
   justify-content: space-between;
   align-items: center;
   width: 1010px;
-  height: 70px;
+  height: 85px;
 }
 
 .footer-left {
@@ -116,6 +116,7 @@ p, h1, h2, h3, h4 {
 #instagram-logo {
   height: 20px;
   opacity: 0.8;
+  opacity: 0;
 }
 
 #footer-copyright {
