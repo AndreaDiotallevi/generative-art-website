@@ -31,12 +31,12 @@ class App extends React.Component {
     return (
       <div className={`app ${this.isHome() && 'component-when-home'}`}>
         <BrowserRouter>
-          <Navbar onClick={this.handleChangePage} currentPage={this.state.currentPage}/>
+          <Navbar onClick={this.handleChangePage} isHome={this.isHome}/>
           <Route path='/' exact component={Home} currentPage={this.state.currentPage}></Route>
           <Route path='/about' exact component={About}></Route>
           <Route path='/artworks' exact component={Artworks}></Route>
           <Route path='/artworks/:title' component={Artwork}></Route>
-          <Footer currentPage={this.state.currentPage}/>
+          <Footer isHome={this.isHome}/>
         </BrowserRouter>
       </div>
     );

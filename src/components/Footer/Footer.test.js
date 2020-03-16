@@ -4,9 +4,10 @@ import Footer from './Footer';
 
 describe('Footer', () => {
   let wrapper;
+  let props = { isHome: () => false }
 
   beforeEach(() => {
-    wrapper = shallow(<Footer />);
+    wrapper = shallow(<Footer {...props}/>);
   })
 
   it('should render Andrea Diotallevi 2020', () => {

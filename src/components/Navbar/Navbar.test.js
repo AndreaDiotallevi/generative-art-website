@@ -4,9 +4,10 @@ import Navbar from './Navbar';
 
 describe('Navbar', () => {
   let wrapper;
+  let props = { isHome: () => false }
 
   beforeEach(() => {
-    wrapper = shallow(<Navbar />);
+    wrapper = shallow(<Navbar {...props}/>);
   })
 
   it('should render ANDREA DIOTALLEVI', () => {
