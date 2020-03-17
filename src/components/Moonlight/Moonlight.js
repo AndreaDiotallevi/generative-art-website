@@ -27,10 +27,10 @@ class Moonlight extends React.Component {
   };
 
   mouseClicked = p5 => {
-    // p5.noiseSeed(p5.random());
-    // p5.background(56, 68, 76);
-    // p5.redraw();
-    p5.noLoop();
+    p5.noiseSeed(p5.random());
+    p5.background(56, 68, 76);
+    p5.redraw();
+    // p5.noLoop();
   }
 
   windowResized = p5 => {
