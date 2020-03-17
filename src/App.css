@@ -246,7 +246,7 @@ p, h1, h2, h3, h4 {
 /* Media Queries */
 
 @media (max-width: 1090px) {
-	#navbar-container, #artworks-container, #footer-container, #about-container, #artwork-container {
+	#navbar-container, #artworks-container, #footer-container, #about-container, #artwork-container, #home-page-text {
 		width: 660px;
   }
   
@@ -256,7 +256,7 @@ p, h1, h2, h3, h4 {
 }
 
 @media (max-width: 740px) {
-	#navbar-container, #artworks-container, #footer-container, #about-container, #artwork-container {
+	#navbar-container, #artworks-container, #footer-container, #about-container, #artwork-container, #home-page-text {
 		width: 88vw;
   }
 
@@ -297,13 +297,12 @@ p, h1, h2, h3, h4 {
   }
 
   .navbar-right {
-    flex-direction: column;
     align-items: flex-end;
   }
 }
 
 @media (max-width: 500px) {
-  .artwork-title, #about-description, .navbar-text {
+  .artwork-title, #about-description, .navbar-text, #home-page-paragraph {
     font-size: 16px;
   }
 
@@ -322,10 +321,14 @@ p, h1, h2, h3, h4 {
   .about-description, #footer-copyright {
     font-size: 14px;
   }
+
+  #home-page-title {
+    font-size: 36px;
+  }
 }
 
 @media (max-width: 400px) {
-  .artwork-title, #about-description, .navbar-text {
+  .artwork-title, #about-description, .navbar-text, #home-page-paragraph {
     font-size: 15px;
   }
 
@@ -344,10 +347,14 @@ p, h1, h2, h3, h4 {
   .about-description, #footer-copyright {
     font-size: 13px;
   }
+
+  #home-page-title {
+    font-size: 32px;
+  }
 }
 
 @media (max-width: 300px) {
-  .artwork-title, #about-description, .navbar-text {
+  .artwork-title, #about-description, .navbar-text, #home-page-paragraph {
     font-size: 14px;
   }
 
@@ -365,6 +372,10 @@ p, h1, h2, h3, h4 {
 
   .about-description, #footer-copyright {
     font-size: 12px;
+  }
+
+  #home-page-title {
+    font-size: 28px;
   }
 }
 
