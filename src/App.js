@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import About from './components/About/About';
 import Artwork from './components/Artwork/Artwork';
 import Artworks from './components/Artworks/Artworks';
 import Footer from './components/Footer/Footer';
@@ -14,7 +13,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentPage: "home"
+      currentPage: ""
     }
   }
 
@@ -30,14 +29,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className={`app ${this.isHome() && 'component-when-home'}`}>
+      <div id='app' className={`app ${this.isHome() ? 'component-when-home' : undefined}`}>
         <BrowserRouter>
-          <Navbar onClick={this.handleChangePage} isHome={this.isHome}/>
-          <Route path='/' exact component={Home} currentPage={this.state.currentPage}></Route>
-          <Route path='/about' exact component={About}></Route>
+          <Navbar onClick={this.handleChangePage}/>
+          <Route path='/' exact component={Home}></Route>
           <Route path='/artworks' exact component={Artworks}></Route>
           <Route path='/artworks/:title' component={Artwork}></Route>
-          <Footer isHome={this.isHome}/>
+          <Footer/>
         </BrowserRouter>
       </div>
     );

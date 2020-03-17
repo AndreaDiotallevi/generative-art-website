@@ -5,14 +5,14 @@ import artworks from './utils/__mocks__/artworks'
  
 Enzyme.configure({ adapter: new Adapter() });
 
-global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
+// global.IntersectionObserver = class IntersectionObserver {
+//   constructor() {}
 
-  observe() {
-    return null;
-  }
+//   observe() {
+//     return null;
+//   }
 
-  unobserve() {
-    return null;
-  }
-};
+//   unobserve() {
+//     return null;
+//   }
+// };

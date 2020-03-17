@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import artworks from '../../utils/artworks';
 
-function Artworks() {
+const Artworks = () => {
   return (
     <div id='artworks-component'>
       <ul id='artworks-container'>

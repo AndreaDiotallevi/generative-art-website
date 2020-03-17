@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Artwork(props) {
+const Artwork = props => {
   const title = props.match.params.title;
 
   return (
