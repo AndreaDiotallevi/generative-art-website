@@ -1,7 +1,7 @@
 * {
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
-  font-size: 17px;
+  font-size: 18px;
   margin: 0;
   padding: 0;
 }
@@ -22,18 +22,49 @@ p, h1, h2, h3, h4 {
 .app {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  height: 100%;
+}
+
+/* Home */
+
+#home-component {
+  height: 100%;
+  background-color: rgb(56, 68, 76);
+}
+
+#home-container {
+  height: 100%;
+}
+
+#home-page-text {
+  position: absolute;
+  width: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#home-page-title {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+#home-page-paragraph {
+  color: white;
+}
+
+.p5Canvas {
   height: 100%;
 }
 
 /* Navbar */
 
-#navbar-component {
+.navbar-component {
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid rgb(132, 132, 132, 0.2);
-  margin-bottom: 100px;
 }
 
 #navbar-container {
@@ -56,20 +87,27 @@ p, h1, h2, h3, h4 {
 
 .navbar-link:hover {
   text-decoration: underline;
+  text-decoration-color: black;
 }
 
 .navbar-text {
   text-decoration: none;
+  color: black;
 }
 
 #navbar-title {
   font-weight: 500;
   font-size: 26px;
+  opacity: 0.8;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 /* Footer */
 
-#footer-component {
+.footer-component {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,7 +119,7 @@ p, h1, h2, h3, h4 {
   justify-content: space-between;
   align-items: center;
   width: 1010px;
-  height: 70px;
+  height: 85px;
 }
 
 .footer-left {
@@ -91,9 +129,10 @@ p, h1, h2, h3, h4 {
 
 #instagram-logo {
   height: 20px;
+  opacity: 0.8;
 }
 
-#footer-copyright {
+.footer-copyright {
   font-size: 15px;
   margin-left: 5px;
   font-size: 15px;
@@ -114,6 +153,7 @@ p, h1, h2, h3, h4 {
 #artworks-component {
   display: flex;
   justify-content: center;
+  margin-top: 100px;
 }
 
 #artworks-container {
@@ -144,6 +184,7 @@ p, h1, h2, h3, h4 {
   flex-direction: column;
   align-items: center;
   margin-bottom: auto;
+  margin-top: 100px;
 }
 
 #artwork-container {
@@ -176,6 +217,7 @@ p, h1, h2, h3, h4 {
   flex-direction: column;
   align-items: center;
   margin-bottom: auto;
+  margin-top: 100px;
 }
 
 #about-container {
@@ -204,7 +246,7 @@ p, h1, h2, h3, h4 {
 /* Media Queries */
 
 @media (max-width: 1090px) {
-	#navbar-container, #artworks-container, #footer-container, #about-container, #artwork-container {
+	#navbar-container, #artworks-container, #footer-container, #about-container, #artwork-container, #home-page-text {
 		width: 660px;
   }
   
@@ -214,12 +256,16 @@ p, h1, h2, h3, h4 {
 }
 
 @media (max-width: 740px) {
-	#navbar-container, #artworks-container, #footer-container, #about-container, #artwork-container {
+	#navbar-container, #artworks-container, #footer-container, #about-container, #artwork-container, #home-page-text {
 		width: 88vw;
   }
 
-  #navbar-component, #artwork-container {
+  #artwork-container {
     margin-bottom: 16.21vw;
+  }
+
+  #artworks-component, #about-component {
+    margin-top: 16.21vw;
   }
 
   .artwork-image {
@@ -249,10 +295,14 @@ p, h1, h2, h3, h4 {
   #about-container {
     flex-direction: column;
   }
+
+  .navbar-right {
+    align-items: flex-end;
+  }
 }
 
 @media (max-width: 500px) {
-  .artwork-title, #about-description, .navbar-text {
+  .artwork-title, #about-description, .navbar-text, #home-page-paragraph {
     font-size: 16px;
   }
 
@@ -271,10 +321,14 @@ p, h1, h2, h3, h4 {
   .about-description, #footer-copyright {
     font-size: 14px;
   }
+
+  #home-page-title {
+    font-size: 36px;
+  }
 }
 
 @media (max-width: 400px) {
-  .artwork-title, #about-description, .navbar-text {
+  .artwork-title, #about-description, .navbar-text, #home-page-paragraph {
     font-size: 15px;
   }
 
@@ -293,10 +347,14 @@ p, h1, h2, h3, h4 {
   .about-description, #footer-copyright {
     font-size: 13px;
   }
+
+  #home-page-title {
+    font-size: 32px;
+  }
 }
 
 @media (max-width: 300px) {
-  .artwork-title, #about-description, .navbar-text {
+  .artwork-title, #about-description, .navbar-text, #home-page-paragraph {
     font-size: 14px;
   }
 
@@ -315,4 +373,21 @@ p, h1, h2, h3, h4 {
   .about-description, #footer-copyright {
     font-size: 12px;
   }
+
+  #home-page-title {
+    font-size: 28px;
+  }
+}
+
+.component-when-home {
+  background-color: rgb(56, 68, 76);
+  border-color: rgb(56, 68, 76);
+}
+
+.text-when-home {
+  color: white;
+}
+
+.text-when-home:hover {
+  text-decoration-color: white;
 }

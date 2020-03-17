@@ -5,19 +5,34 @@ import Navbar from './Navbar';
 describe('Navbar', () => {
   let wrapper;
 
-  beforeEach(() => {
-    wrapper = shallow(<Navbar />);
+  describe('When not in Home', () => {
+    let props = { location: { pathname: '/artworks' } };
+
+    beforeEach(() => {
+      wrapper = shallow(<Navbar {...props}/>);
+    })
+
+    it('should render ANDREA DIOTALLEVI', () => {
+      const h1 = wrapper.find({ id: 'navbar-title' });
+      expect(h1.text()).toEqual('ANDREA DIOTALLEVI');
+    })
+
+    it('should render home and about navbar links', () => {
+      const homeLink = wrapper.find({ id: 'navbar-home' });
+      expect(homeLink.text()).toEqual('home');
+    })
   })
 
-  it('should render ANDREA DIOTALLEVI', () => {
-    const h1 = wrapper.find({ id: 'navbar-title' });
-    expect(h1.text()).toEqual('ANDREA DIOTALLEVI');
-  })
+  describe('When in Home', () => {
+    let props = { location: { pathname: '/' } };
 
-  it('should render home and about navbar links', () => {
-    const homeLink = wrapper.find({ id: 'navbar-home' });
-    const aboutLink = wrapper.find({ id: 'navbar-about' });
-    expect(homeLink.text()).toEqual('home');
-    expect(aboutLink.text()).toEqual('about');
+    beforeEach(() => {
+      wrapper = shallow(<Navbar {...props}/>);
+    })
+
+    it('should render the navbar component with the class component-when-home', () => {
+      const div = wrapper.find({ id: 'navbar-component' });
+      expect(div.hasClass('component-when-home')).toEqual(true);
+    })
   })
 })

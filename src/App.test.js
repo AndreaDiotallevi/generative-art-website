@@ -1,7 +1,8 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import App from './App';
+import { shallow } from 'enzyme';
 
 test('App renders without errors', () => {
-  const { getByText } = render(<App />);
+  let wrapper = shallow(<App />);
+  expect(wrapper.length).toEqual(1);
 });
