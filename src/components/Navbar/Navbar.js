@@ -1,13 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useLocation } from 'react-router';
 
 const Navbar = props => {
 
-  const currentPath = useLocation().pathname;
-
   const isHome = () => {
-    return currentPath === '/';
+    return props.location.pathname === '/';
   }
 
   return (

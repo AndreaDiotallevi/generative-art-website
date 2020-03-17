@@ -9,37 +9,18 @@ import Navbar from './components/Navbar/Navbar';
 
 import './App.css';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentPage: ""
-    }
-  }
-
-  isHome = () => {
-    return this.state.currentPage === 'home';
-  }
-
-  handleChangePage = (e) => {
-    console.log(e.target)
-    let currentPage = e.target.id.split("-")[1];
-    this.setState({ currentPage })
-  }
-
-  render() {
-    return (
-      <div id='app' className={`app ${this.isHome() ? 'component-when-home' : undefined}`}>
-        <BrowserRouter>
-          <Navbar onClick={this.handleChangePage}/>
-          <Route path='/' exact component={Home}></Route>
-          <Route path='/artworks' exact component={Artworks}></Route>
-          <Route path='/artworks/:title' component={Artwork}></Route>
-          <Footer/>
-        </BrowserRouter>
-      </div>
-    );
-  }
+const App = () => {
+  return (
+    <div className='app'>
+      <BrowserRouter>
+        <Route component={Navbar}></Route>
+        <Route path='/' exact component={Home}></Route>
+        <Route path='/artworks' exact component={Artworks}></Route>
+        <Route path='/artworks/:title' component={Artwork}></Route>
+        <Route component={Footer}></Route>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
