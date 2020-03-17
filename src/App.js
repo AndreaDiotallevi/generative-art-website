@@ -18,11 +18,12 @@ class App extends React.Component {
     }
   }
 
-  isHome() {
+  isHome = () => {
     return this.state.currentPage === 'home';
   }
 
   handleChangePage = (e) => {
+    console.log(e.target)
     let currentPage = e.target.id.split("-")[1];
     this.setState({ currentPage })
   }
