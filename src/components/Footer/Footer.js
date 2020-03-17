@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer(props) {
   return (
-    <div className={`footer-component ${props.isHome() && 'component-when-home'}`}>
+    <div id='footer-component' className={`footer-component ${props.isHome() && 'component-when-home'}`}>
       <div id='footer-container'>
         <div className='footer-left'>
           <p id='footer-copyright' className={`footer-copyright ${props.isHome() && 'text-when-home'}`}>© 2020, Andrea Diotallevi</p>

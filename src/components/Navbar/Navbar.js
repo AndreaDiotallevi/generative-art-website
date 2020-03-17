@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar(props) {
   return (
-    <div className={`navbar-component ${props.isHome() && 'component-when-home'}`}>
+    <div id='navbar-component' className={`navbar-component ${props.isHome() && 'component-when-home'}`}>
       <div id='navbar-container'>
         <div className='navbar-left'>
           <h1 id='navbar-title' className={props.isHome() && 'hidden'}>ANDREA DIOTALLEVI</h1>
