@@ -17,7 +17,7 @@ class Moonlight extends React.Component {
     const n = p5.noise
 
     let a = n(this.t + 9) * w / 2;
-    let b = n(w) * w / 2;
+    let b = 0.49 * w;
     let c = n(this.t) * 6;
     let d = n(this.t++ + 60) * 6;
 
@@ -29,6 +29,7 @@ class Moonlight extends React.Component {
   mouseClicked = p5 => {
     p5.noiseSeed(p5.random());
     p5.background(56, 68, 76);
+    this.t = 0;
     p5.draw();
   }
 
@@ -36,6 +37,7 @@ class Moonlight extends React.Component {
     p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
     p5.noiseSeed(p5.random());
     p5.background(56, 68, 76);
+    this.t = 0;
     p5.draw();
   }
  
