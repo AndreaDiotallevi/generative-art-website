@@ -18,6 +18,6 @@ describe('Artworks', () => {
 
   it('should render the artwork title', () => {
     const p = wrapper.find({ id: 'artwork-title-1'} );
-    expect(p.text()).toEqual('test-artwork');
+    expect(p.text()).toEqual('test artwork');
   })
 })
