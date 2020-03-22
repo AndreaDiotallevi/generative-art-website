@@ -9,7 +9,7 @@ const Artworks = () => {
         {artworks.map((artwork) => (
         <li className='artwork' key={artwork.id}>
           <Link to={`/art/${artwork.title.replace(' ', '-')}`} className='artwork-link'>
-            <img id={`artwork-image-${artwork.id}`} className='artwork-image' src={require(`../../assets/${artwork.title.replace(' ', '-')}.png`)} alt={artwork.title}></img>
+            <img id={`artwork-image-${artwork.id}`} className='artwork-image' src={require(`../../assets/${artwork.title.replace(' ', '-')}-0.png`)} alt={artwork.title}></img>
             <p id={`artwork-title-${artwork.id}`} className='artwork-title'>{artwork.title.toUpperCase()}</p>
           </Link>
         </li>
