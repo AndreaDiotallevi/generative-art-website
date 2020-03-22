@@ -13,8 +13,8 @@ describe('Artwork', () => {
   })
 
   it('should render the artwork page image', () => {
-    const img = wrapper.find({ id: 'artwork-page-image'});
-    expect(img.props().src).toEqual('test-artwork.png');
+    const img = wrapper.find({ id: 'artwork-page-image-0'});
+    expect(img.props().src).toEqual('test-artwork-0.png');
   })
 
   it('should render the artwork page title', () => {
