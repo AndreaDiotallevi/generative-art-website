@@ -2,6 +2,8 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Artwork from './Artwork';
 
+jest.mock('../../utils/artworks');
+
 describe('Artwork', () => {
   let wrapper;
   let props = { match: { params: { title: 'test-artwork' } } };
@@ -17,6 +19,11 @@ describe('Artwork', () => {
 
   it('should render the artwork page title', () => {
     const h3 = wrapper.find({ id: 'artwork-page-title' } );
-    expect(h3.text()).toEqual('test artwork');
+    expect(h3.text()).toEqual('TEST ARTWORK');
+  })
+
+  it('should render the artwork description', () => {
+    const p = wrapper.find({ id: 'artwork-page-description' } );
+    expect(p.text()).toEqual('description');
   })
 })

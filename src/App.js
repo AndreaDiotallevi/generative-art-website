@@ -15,8 +15,8 @@ const App = () => {
       <BrowserRouter>
         <Route component={Navbar}></Route>
         <Route path='/' exact component={Home}></Route>
-        <Route path='/artworks' exact component={Artworks}></Route>
-        <Route path='/artworks/:title' component={Artwork}></Route>
+        <Route path='/art' exact component={Artworks}></Route>
+        <Route path='/art/:title' component={Artwork}></Route>
         <Route component={Footer}></Route>
       </BrowserRouter>
     </div>

@@ -14,7 +14,7 @@ describe('Footer', () => {
 
     it('should render Andrea Diotallevi 2020', () => {
       const p = wrapper.find({ id: 'footer-copyright' });
-      expect(p.text()).toEqual('© 2020, Andrea Diotallevi');
+      expect(p.text()).toEqual('© 2020, ANDREA DIOTALLEVI');
     })
 
     it('should render the instagram logo with hyperlink', () => {
