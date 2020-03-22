@@ -135,7 +135,6 @@ p, h1, h2, h3, h4 {
 
 .footer-copyright {
   font-size: 15px;
-  margin-left: 5px;
   font-size: 15px;
 }
 
@@ -167,7 +166,7 @@ p, h1, h2, h3, h4 {
 
 .artwork-title {
   margin-bottom: 70px;
-  /* text-align: center; */
+  word-break: break-word;
 }
 
 .artwork-image {
@@ -289,6 +288,10 @@ p, h1, h2, h3, h4 {
   }
 
   .artwork-title {
+    width: 41vw;
+  }
+
+  .artwork-title {
     margin-bottom: 9.45vw;
   }
 
@@ -326,7 +329,7 @@ p, h1, h2, h3, h4 {
 
 @media (max-width: 500px) {
   .artwork-title, #about-description, .navbar-text, #home-page-paragraph, #artwork-page-description {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .navbar-link {
@@ -334,7 +337,11 @@ p, h1, h2, h3, h4 {
   }
 
   #navbar-title, #about-title {
-    font-size: 24px;
+    font-size: 23px;
+  }
+
+  #navbar-container, #footer-container {
+    height: 75px;
   }
 
   #artwork-page-title {
@@ -356,7 +363,7 @@ p, h1, h2, h3, h4 {
 
 @media (max-width: 400px) {
   .artwork-title, #about-description, .navbar-text, #home-page-paragraph, #artwork-page-description {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .navbar-link {
@@ -364,7 +371,11 @@ p, h1, h2, h3, h4 {
   }
 
   #navbar-title, #about-title {
-    font-size: 22px;
+    font-size: 20px;
+  }
+
+  #navbar-container, #footer-container {
+    height: 70px;
   }
 
   #artwork-page-title {
@@ -386,7 +397,7 @@ p, h1, h2, h3, h4 {
 
 @media (max-width: 300px) {
   .artwork-title, #about-description, .navbar-text, #home-page-paragraph, #artwork-page-description {
-    font-size: 14px;
+    font-size: 11px;
   }
 
   .navbar-link {
@@ -394,7 +405,11 @@ p, h1, h2, h3, h4 {
   }
 
   #navbar-title, #about-title {
-    font-size: 20px;
+    font-size: 17px;
+  }
+
+  #navbar-container, #footer-container {
+    height: 65px;
   }
 
   #artwork-page-title {
@@ -406,7 +421,7 @@ p, h1, h2, h3, h4 {
   }
 
   .about-description, #footer-copyright {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   #home-page-title {
