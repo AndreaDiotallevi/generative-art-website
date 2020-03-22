@@ -16,19 +16,19 @@ class Moonlight extends React.Component {
     const w = p5.min(p5.windowWidth, height);
     const n = p5.noise
 
-    let a = n(this.t + 9) * w / 2;
-    let b = n(w) * w / 2;
-    let c = n(this.t) * 6;
-    let d = n(this.t++ + 60) * 6;
+    let a = 0.49 * w;
+    let b = n(this.t) * 6;
+    let c = n(this.t++ + 60) * 6;
 
     p5.noFill();
     p5.stroke(255, 30);
-    p5.line(p5.cos(c) * a, p5.sin(c) * a, p5.cos(d) * b, p5.sin(d) * b);
+    p5.line(p5.cos(b) * a, p5.sin(b) * a, p5.cos(c) * a, p5.sin(c) * a);
   };
 
   mouseClicked = p5 => {
     p5.noiseSeed(p5.random());
     p5.background(56, 68, 76);
+    this.t = 0;
     p5.draw();
   }
 
@@ -36,6 +36,7 @@ class Moonlight extends React.Component {
     p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
     p5.noiseSeed(p5.random());
     p5.background(56, 68, 76);
+    this.t = 0;
     p5.draw();
   }
  

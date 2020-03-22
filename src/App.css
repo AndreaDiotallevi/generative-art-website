@@ -38,6 +38,7 @@ p, h1, h2, h3, h4 {
 
 #home-page-text {
   position: absolute;
+  text-align: center;
   width: 600px;
   top: 50%;
   left: 50%;
@@ -273,7 +274,7 @@ p, h1, h2, h3, h4 {
     margin-bottom: 16.21vw;
   }
 
-  #artworks-component, #about-component {
+  #artworks-component, #artwork-component, #about-component {
     margin-top: 16.21vw;
   }
 
