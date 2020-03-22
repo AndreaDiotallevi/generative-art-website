@@ -4,9 +4,9 @@ import artworks from '../../utils/artworks';
 const Artwork = props => {
   const title = props.match.params.title;
 
-  function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
+  // function capitalizeFirstLetter(string) {
+  //   return string.charAt(0).toUpperCase() + string.slice(1);
+  // }
 
   return (
     <div id='artwork-component'>
