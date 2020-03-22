@@ -14,13 +14,13 @@ const Navbar = props => {
           <h1 id='navbar-title' className={isHome() ? 'hidden' : undefined}>ANDREA DIOTALLEVI</h1>
         </div>
         <div className='navbar-right'>
+          <Link to='/art' className={`navbar-link ${isHome() ? 'text-when-home' : undefined}`}>
+            <p id='navbar-artworks' className={`navbar-text ${isHome() ? 'text-when-home' : undefined}`}>ART</p>
+          </Link>
           <Link to='/' className={`navbar-link ${isHome() ? 'text-when-home' : undefined}`}>
-            <p id='navbar-home' className={`navbar-text ${isHome() ? 'text-when-home' : undefined}`}>home</p>
+            <p id='navbar-home' className={`navbar-text ${isHome() ? 'text-when-home' : undefined}`}>HOME</p>
           </Link>
-          <a href='https://medium.com/@andreadiotallevi' id='medium-hyperlink' target="_blank" rel="noopener noreferrer" className={`navbar-link navbar-text ${isHome() ? 'text-when-home' : undefined}`}>blog</a>
-          <Link to='/artworks' className={`navbar-link ${isHome() ? 'text-when-home' : undefined}`}>
-            <p id='navbar-artworks' className={`navbar-text ${isHome() ? 'text-when-home' : undefined}`}>art</p>
-          </Link>
+          {/* <a href='https://medium.com/@andreadiotallevi' id='medium-hyperlink' target="_blank" rel="noopener noreferrer" className={`navbar-link navbar-text ${isHome() ? 'text-when-home' : undefined}`}>BLOG</a> */}
         </div>
       </div>
     </div>

@@ -19,7 +19,7 @@ describe('Artwork', () => {
 
   it('should render the artwork page title', () => {
     const h3 = wrapper.find({ id: 'artwork-page-title' } );
-    expect(h3.text()).toEqual('test artwork');
+    expect(h3.text()).toEqual('TEST ARTWORK');
   })
 
   it('should render the artwork description', () => {
