@@ -21,7 +21,7 @@ class Moonlight extends React.Component {
     let c = n(this.t++ + 60) * 6;
 
     p5.noFill();
-    p5.stroke(255, 30);
+    p5.stroke(255, 10);
     p5.line(p5.cos(b) * a, p5.sin(b) * a, p5.cos(c) * a, p5.sin(c) * a);
   };
 
