@@ -6,8 +6,6 @@ const Navbar = (props) => {
     if (props.location.pathname === "/") {
       return "home";
     }
-
-    return undefined;
   };
 
   return (
@@ -23,17 +21,17 @@ const Navbar = (props) => {
         <div className="navbar-right">
           <Link to="/art" className={`navbar-link ${getClassName()}`}>
             <p id="navbar-artworks" className={`navbar-text ${getClassName()}`}>
-              ART
-            </p>
-          </Link>
-          <Link to="/" className={`navbar-link ${getClassName()}`}>
-            <p id="navbar-home" className={`navbar-text ${getClassName()}`}>
-              HOME
+              Generative Art
             </p>
           </Link>
           <Link to="/dev" className={`navbar-link ${getClassName()}`}>
             <p id="navbar-dev" className={`navbar-text ${getClassName()}`}>
-              DEV
+              Dev Portfolio
+            </p>
+          </Link>
+          <Link to="/" className={`navbar-link ${getClassName()}`}>
+            <p id="navbar-home" className={`navbar-text ${getClassName()}`}>
+              Home
             </p>
           </Link>
         </div>

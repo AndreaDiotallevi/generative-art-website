@@ -5,8 +5,10 @@ const ProjectOverview = ({ project }) => {
     if (project.apis !== null) {
       return (
         <span>
-          <p className="bold">External APIs: </p>
-          <p className="margin-left">{project.apis}</p>
+          <p className="margin-left">
+            <strong>External APIs: </strong>
+            {project.apis}
+          </p>
         </span>
       );
     }
@@ -16,28 +18,23 @@ const ProjectOverview = ({ project }) => {
     <div className="project-overview-component">
       <h3 className="project-name">{project.name}</h3>
       <p className="project-overview">{project.overview}</p>
-      <span>
-        <p className="bold">Stack: </p>
-        <p className="margin-left">{project.devTechnologies}</p>
-      </span>
+      <p>
+        <strong>Stack: </strong>
+        {project.devTechnologies}
+      </p>
       {renderApis()}
-      <span>
-        <p className="bold">Testing, CI, CD: </p>
-        <p className="margin-left">{project.testingTechnologies}</p>
-      </span>
-      <span>
+      <p className="margin-left">
+        <strong>Testing, CI, CD: </strong>
+        {project.testingTechnologies}
+      </p>
+      <div className="project-anchors-container">
         <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
           Live Demo
         </a>
-        <a
-          href={project.githubUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="github-anchor"
-        >
+        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
           GitHub Repo
         </a>
-      </span>
+      </div>
     </div>
   );
 };
