@@ -14,9 +14,11 @@ const Navbar = (props) => {
     <div id="navbar-component" className={`navbar-component ${getClassName()}`}>
       <div id="navbar-container">
         <div className="navbar-left">
-          <h1 id="navbar-title" className={`navbar-title ${getClassName()}`}>
-            ANDREA DIOTALLEVI
-          </h1>
+          <Link to="/">
+            <h1 id="navbar-title" className={`navbar-title ${getClassName()}`}>
+              ANDREA DIOTALLEVI
+            </h1>
+          </Link>
         </div>
         <div className="navbar-right">
           <Link to="/art" className={`navbar-link ${getClassName()}`}>

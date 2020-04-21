@@ -15,6 +15,10 @@ h4 {
   color: black;
 }
 
+a {
+  text-decoration: none;
+}
+
 #root {
   position: absolute;
   top: 0;
@@ -93,7 +97,6 @@ h4 {
 
 .navbar-link {
   margin-left: 25px;
-  text-decoration: none;
 }
 
 .navbar-link:hover {
@@ -103,7 +106,6 @@ h4 {
 }
 
 .navbar-text {
-  text-decoration: none;
   color: black;
 }
 
@@ -170,7 +172,6 @@ h4 {
 .project-overview-component {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   margin-left: 40px;
 }
 
@@ -204,29 +205,19 @@ span p {
 }
 
 span a {
-  /* color: rgb(56, 68, 76); */
   color: black;
   font-weight: 500;
-  /* border: 1px solid white; */
   border-bottom: 1px solid white;
-  /* padding: 2px 5px; */
-  /* margin-bottom: 15px; */
-  margin-left: 15px;
   opacity: 0.8;
 }
 
 span a:hover {
-  /* color: white; */
-  /* background-color: black; */
   transition: 0.3s;
   border-bottom: 1px solid black;
-  /* border: 1px solid black; */
-  /* border-radius: 2px; */
 }
 
-.project-overview-links {
-  display: flex;
-  justify-content: flex-end;
+.github-anchor {
+  margin-left: 15px;
 }
 
 /* Artworks */
@@ -234,7 +225,6 @@ span a:hover {
 #artworks-component {
   display: flex;
   justify-content: center;
-  /* margin-top: 100px; */
 }
 
 #artworks-container {
@@ -265,10 +255,6 @@ span a:hover {
 .artwork-image:hover {
   opacity: 0.9;
   transition: 0.3s;
-}
-
-.artwork-link {
-  text-decoration: none;
 }
 
 /* Artwork */
