@@ -459,12 +459,6 @@ strong {
   }
 }
 
-@media (max-width: 600px) {
-  .navbar-right {
-    align-items: flex-end;
-  }
-}
-
 @media (max-width: 500px) {
   .artwork-title,
   .navbar-text,
@@ -510,7 +504,8 @@ strong {
   .project-overview,
   .project-overview-component p,
   .project-overview-component p strong,
-  .project-anchors-container a {
+  .project-anchors-container a,
+  .blog-link {
     font-size: 13px;
   }
 
@@ -550,7 +545,8 @@ strong {
   #artwork-page-description,
   .project-overview-component p,
   .project-overview-component p strong,
-  .project-anchors-container a {
+  .project-anchors-container a,
+  .blog-link {
     font-size: 11px;
   }
 
