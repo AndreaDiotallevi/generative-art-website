@@ -102,11 +102,7 @@ a {
   align-items: center;
 }
 
-.navbar-link {
-  margin-left: 25px;
-}
-
-.navbar-link:hover {
+.navbar-text:hover {
   text-decoration: underline;
   text-decoration-color: black;
   transition: 0.3s;
@@ -115,6 +111,11 @@ a {
 .navbar-text {
   color: black;
   text-transform: uppercase;
+  margin-left: 25px;
+}
+
+.active {
+  text-decoration: underline;
 }
 
 .navbar-title {
@@ -469,7 +470,7 @@ strong {
     font-size: 15px;
   }
 
-  .navbar-link {
+  .navbar-text {
     margin-left: 20px;
   }
 
@@ -510,7 +511,7 @@ strong {
     font-size: 13px;
   }
 
-  .navbar-link {
+  .navbar-text {
     margin-left: 15px;
   }
 
@@ -550,7 +551,7 @@ strong {
     font-size: 11px;
   }
 
-  .navbar-link {
+  .navbar-text {
     margin-left: 10px;
   }
 
