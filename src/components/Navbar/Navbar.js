@@ -32,7 +32,7 @@ const Navbar = (props) => {
             href="https://medium.com/@andreadiotallevi"
             target="_blank"
             rel="noopener noreferrer"
-            className={`blog-link ${getClassName()}`}
+            className={`navbar-text ${getClassName()}`}
           >
             Blog
           </a>

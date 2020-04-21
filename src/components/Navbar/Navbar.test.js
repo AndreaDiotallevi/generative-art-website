@@ -17,9 +17,9 @@ describe("Navbar", () => {
       expect(h1.text()).toEqual("ANDREA DIOTALLEVI");
     });
 
-    it("should render home and about navbar links", () => {
-      const homeLink = wrapper.find({ id: "navbar-home" });
-      expect(homeLink.text()).toEqual("home");
+    it("should render the contact navbar link", () => {
+      const homeLink = wrapper.find({ id: "navbar-contact" });
+      expect(homeLink.text()).toEqual("Contact");
     });
   });
 

@@ -106,16 +106,10 @@ a {
   color: black;
   text-transform: uppercase;
   margin-left: 25px;
+  font-size: 13px;
 }
 
-.blog-link {
-  text-transform: uppercase;
-  color: black;
-  margin-left: 25px;
-}
-
-.navbar-text:hover,
-.blog-link:hover {
+.navbar-text:hover {
   text-decoration: underline;
   text-decoration-color: black;
   transition: 0.3s;
@@ -301,8 +295,16 @@ strong {
 
 .contact-component {
   display: flex;
-  width: 1010px;
+  justify-content: center;
+  width: 100%;
   margin-bottom: auto;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  width: 1010px;
 }
 
 .profile-photo {
@@ -311,10 +313,11 @@ strong {
 
 .contact-overview-container {
   margin-left: 40px;
+  margin-bottom: 40px;
 }
 
 .contact-overview-container h4 {
-  font-size: 17px;
+  /* font-size: 17px; */
   margin-bottom: 15px;
 }
 
@@ -357,12 +360,11 @@ strong {
 
 #instagram-logo {
   height: 20px;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .footer-copyright {
-  font-size: 15px;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 #instagram-hyperlink {
@@ -382,6 +384,7 @@ strong {
   #artworks-container,
   #footer-container,
   #artwork-container,
+  .contact-container,
   .project-list-item,
   .project-video {
     width: 660px;
@@ -393,6 +396,17 @@ strong {
 
   .project-list-item {
     flex-direction: column-reverse;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-overview-container {
+    margin-top: 40px;
+    margin-left: 0;
+    width: 485px;
   }
 
   .project-overview-component {
@@ -407,7 +421,9 @@ strong {
   #footer-container,
   #artwork-container,
   .project-list-item,
-  .project-video {
+  .project-video,
+  .profile-photo,
+  .contact-overview-container {
     width: 88vw;
   }
 
@@ -490,10 +506,6 @@ strong {
   #artwork-page-title {
     margin-bottom: 23px;
   }
-
-  #footer-copyright {
-    font-size: 14px;
-  }
 }
 
 @media (max-width: 400px) {
@@ -505,7 +517,9 @@ strong {
   .project-overview-component p,
   .project-overview-component p strong,
   .project-anchors-container a,
-  .blog-link {
+  #footer-copyright,
+  .contact-overview-container p,
+  .contact-overview-container a {
     font-size: 13px;
   }
 
@@ -532,10 +546,6 @@ strong {
   #artwork-page-title {
     margin-bottom: 21px;
   }
-
-  #footer-copyright {
-    font-size: 13px;
-  }
 }
 
 @media (max-width: 300px) {
@@ -546,7 +556,9 @@ strong {
   .project-overview-component p,
   .project-overview-component p strong,
   .project-anchors-container a,
-  .blog-link {
+  #footer-copyright,
+  .contact-overview-container p,
+  .contact-overview-container a {
     font-size: 11px;
   }
 
@@ -572,10 +584,6 @@ strong {
 
   #artwork-page-title {
     margin-bottom: 19px;
-  }
-
-  #footer-copyright {
-    font-size: 11px;
   }
 }
 
