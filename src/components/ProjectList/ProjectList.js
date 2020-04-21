@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectGif from "../ProjectGif/ProjectGif";
-import ProjectOverview from "./ProjectOverview";
+import ProjectOverview from "../ProjectOverview/ProjectOverview";
 import projects from "../../utils/projects";
 
 const ProjectList = () => {
