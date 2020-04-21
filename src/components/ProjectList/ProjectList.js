@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectGif from "./ProjectGif";
 import ProjectOverview from "./ProjectOverview";
-import projects from "../utils/projects";
+import projects from "../../utils/projects";
 
 const ProjectList = () => {
   const renderList = () => {
