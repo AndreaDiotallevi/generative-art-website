@@ -1,29 +1,43 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const Navbar = props => {
+const Navbar = (props) => {
+  const getClassName = () => {
+    if (props.location.pathname === "/") {
+      return "home";
+    }
 
-  const isHome = () => {
-    return props.location.pathname === '/';
-  }
+    return undefined;
+  };
 
   return (
-    <div id='navbar-component' className={`navbar-component ${isHome() ? 'component-when-home' : undefined}`}>
-      <div id='navbar-container'>
-        <div className='navbar-left'>
-          <h1 id='navbar-title' className={`navbar-title ${isHome() ? 'text-when-home' : undefined}`}>ANDREA DIOTALLEVI</h1>
+    <div id="navbar-component" className={`navbar-component ${getClassName()}`}>
+      <div id="navbar-container">
+        <div className="navbar-left">
+          <h1 id="navbar-title" className={`navbar-title ${getClassName()}`}>
+            ANDREA DIOTALLEVI
+          </h1>
         </div>
-        <div className='navbar-right'>
-          <Link to='/art' className={`navbar-link ${isHome() ? 'text-when-home' : undefined}`}>
-            <p id='navbar-artworks' className={`navbar-text ${isHome() ? 'text-when-home' : undefined}`}>ART</p>
+        <div className="navbar-right">
+          <Link to="/art" className={`navbar-link ${getClassName()}`}>
+            <p id="navbar-artworks" className={`navbar-text ${getClassName()}`}>
+              ART
+            </p>
           </Link>
-          <Link to='/' className={`navbar-link ${isHome() ? 'text-when-home' : undefined}`}>
-            <p id='navbar-home' className={`navbar-text ${isHome() ? 'text-when-home' : undefined}`}>HOME</p>
+          <Link to="/" className={`navbar-link ${getClassName()}`}>
+            <p id="navbar-home" className={`navbar-text ${getClassName()}`}>
+              HOME
+            </p>
+          </Link>
+          <Link to="/dev" className={`navbar-link ${getClassName()}`}>
+            <p id="navbar-dev" className={`navbar-text ${getClassName()}`}>
+              DEV
+            </p>
           </Link>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Navbar;

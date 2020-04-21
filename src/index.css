@@ -1,12 +1,16 @@
 * {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: 300;
   font-size: 17px;
   margin: 0;
   padding: 0;
 }
 
-p, h1, h2, h3, h4 {
+p,
+h1,
+h2,
+h3,
+h4 {
   color: rgb(61, 66, 70);
   color: black;
 }
@@ -22,6 +26,7 @@ p, h1, h2, h3, h4 {
 .app {
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 100%;
 }
 
@@ -105,10 +110,6 @@ p, h1, h2, h3, h4 {
   opacity: 0.8;
 }
 
-/* .hidden {
-  visibility: hidden;
-} */
-
 /* Footer */
 
 .footer-component {
@@ -149,6 +150,100 @@ p, h1, h2, h3, h4 {
 .icon__fallback-text {
   visibility: hidden;
   font-size: 1px;
+}
+
+/* ProjectList */
+
+.project-list-component {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-list-item {
+  display: flex;
+  width: 1010px;
+}
+
+.project-list-item {
+  margin-bottom: 100px;
+}
+
+/* ProjectGif */
+
+.project-video {
+  width: 485px;
+  height: auto;
+  /* border-radius: 10px; */
+  /* box-shadow: 2px -2px 10px 0 rgba(0, 0, 0, 0.2); */
+}
+
+.project-video:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+/* ProjectOverview */
+
+.project-overview-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 40px;
+}
+
+.project-name {
+  font-size: 26px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+.project-overview {
+  margin-bottom: 15px;
+}
+
+.bold {
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.margin-left {
+  margin-left: 5px;
+}
+
+span {
+  display: flex;
+}
+
+span p {
+  margin-bottom: 15px;
+}
+
+span a {
+  /* color: rgb(56, 68, 76); */
+  color: black;
+  font-weight: 500;
+  /* border: 1px solid white; */
+  border-bottom: 1px solid white;
+  /* padding: 2px 5px; */
+  /* margin-bottom: 15px; */
+  margin-left: 15px;
+  opacity: 0.8;
+}
+
+span a:hover {
+  /* color: white; */
+  /* background-color: black; */
+  transition: 0.3s;
+  border-bottom: 1px solid black;
+  /* border: 1px solid black; */
+  /* border-radius: 2px; */
+}
+
+.project-overview-links {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* Artworks */
@@ -270,8 +365,12 @@ p, h1, h2, h3, h4 {
 /* Media Queries */
 
 @media (max-width: 1090px) {
-	#navbar-container, #artworks-container, #footer-container, #about-container, #artwork-container {
-		width: 660px;
+  #navbar-container,
+  #artworks-container,
+  #footer-container,
+  #about-container,
+  #artwork-container {
+    width: 660px;
   }
 
   #artwork-page-images {
@@ -280,15 +379,21 @@ p, h1, h2, h3, h4 {
 }
 
 @media (max-width: 740px) {
-	#navbar-container, #artworks-container, #footer-container, #about-container, #artwork-container {
-		width: 88vw;
+  #navbar-container,
+  #artworks-container,
+  #footer-container,
+  #about-container,
+  #artwork-container {
+    width: 88vw;
   }
 
   #artwork-container {
     margin-bottom: 16.21vw;
   }
 
-  #artworks-component, #artwork-component, #about-component {
+  #artworks-component,
+  #artwork-component,
+  #about-component {
     margin-top: 16.21vw;
   }
 
@@ -342,7 +447,11 @@ p, h1, h2, h3, h4 {
 }
 
 @media (max-width: 500px) {
-  .artwork-title, #about-description, .navbar-text, .home-page-paragraph, #artwork-page-description {
+  .artwork-title,
+  #about-description,
+  .navbar-text,
+  .home-page-paragraph,
+  #artwork-page-description {
     font-size: 15px;
   }
 
@@ -350,11 +459,13 @@ p, h1, h2, h3, h4 {
     margin-left: 20px;
   }
 
-  .navbar-title, #about-title {
+  .navbar-title,
+  #about-title {
     font-size: 23px;
   }
 
-  #navbar-container, #footer-container {
+  #navbar-container,
+  #footer-container {
     height: 75px;
   }
 
@@ -362,11 +473,13 @@ p, h1, h2, h3, h4 {
     font-size: 20px;
   }
 
-  #about-title, #artwork-page-title {
+  #about-title,
+  #artwork-page-title {
     margin-bottom: 23px;
   }
 
-  .about-description, #footer-copyright {
+  .about-description,
+  #footer-copyright {
     font-size: 14px;
   }
 
@@ -376,7 +489,11 @@ p, h1, h2, h3, h4 {
 }
 
 @media (max-width: 400px) {
-  .artwork-title, #about-description, .navbar-text, .home-page-paragraph, #artwork-page-description {
+  .artwork-title,
+  #about-description,
+  .navbar-text,
+  .home-page-paragraph,
+  #artwork-page-description {
     font-size: 13px;
   }
 
@@ -384,11 +501,13 @@ p, h1, h2, h3, h4 {
     margin-left: 15px;
   }
 
-  .navbar-title, #about-title {
+  .navbar-title,
+  #about-title {
     font-size: 20px;
   }
 
-  #navbar-container, #footer-container {
+  #navbar-container,
+  #footer-container {
     height: 70px;
   }
 
@@ -396,11 +515,13 @@ p, h1, h2, h3, h4 {
     font-size: 19px;
   }
 
-  #about-title, #artwork-page-title {
+  #about-title,
+  #artwork-page-title {
     margin-bottom: 21px;
   }
 
-  .about-description, #footer-copyright {
+  .about-description,
+  #footer-copyright {
     font-size: 13px;
   }
 
@@ -410,7 +531,11 @@ p, h1, h2, h3, h4 {
 }
 
 @media (max-width: 300px) {
-  .artwork-title, #about-description, .navbar-text, .home-page-paragraph, #artwork-page-description {
+  .artwork-title,
+  #about-description,
+  .navbar-text,
+  .home-page-paragraph,
+  #artwork-page-description {
     font-size: 11px;
   }
 
@@ -418,11 +543,13 @@ p, h1, h2, h3, h4 {
     margin-left: 10px;
   }
 
-  .navbar-title, #about-title {
+  .navbar-title,
+  #about-title {
     font-size: 17px;
   }
 
-  #navbar-container, #footer-container {
+  #navbar-container,
+  #footer-container {
     height: 65px;
   }
 
@@ -430,11 +557,13 @@ p, h1, h2, h3, h4 {
     font-size: 18px;
   }
 
-  #about-title, #artwork-page-title {
+  #about-title,
+  #artwork-page-title {
     margin-bottom: 19px;
   }
 
-  .about-description, #footer-copyright {
+  .about-description,
+  #footer-copyright {
     font-size: 11px;
   }
 
@@ -443,22 +572,15 @@ p, h1, h2, h3, h4 {
   }
 }
 
-.component-when-home {
+.home {
   background-color: rgb(56, 68, 76);
   border-color: rgb(56, 68, 76);
-}
-
-.text-when-home {
   color: white;
-  opacity: 1;
-}
-
-.text-when-home:hover {
-  text-decoration-color: white;
-  transition: 0.3s;
-}
-
-.logo-when-home {
   fill: white;
   opacity: 1;
+}
+
+.home:hover {
+  text-decoration-color: white;
+  transition: 0.3s;
 }
