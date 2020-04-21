@@ -7,6 +7,7 @@ import Home from "../Home/Home";
 import ProjectList from "../ProjectList/ProjectList";
 import Artworks from "../Artworks/Artworks";
 import Artwork from "../Artwork/Artwork";
+import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
 
 const App = () => {
@@ -16,9 +17,10 @@ const App = () => {
         <Route component={Navbar}></Route>
         <Route component={PageTitle}></Route>
         <Route path="/" exact component={Home}></Route>
-        <Route path="/dev" exact component={ProjectList}></Route>
+        <Route path="/portfolio" exact component={ProjectList}></Route>
         <Route path="/art" exact component={Artworks}></Route>
         <Route path="/art/:title" component={Artwork}></Route>
+        <Route path="/contact" exact component={Contact}></Route>
         <Route component={Footer}></Route>
       </BrowserRouter>
     </div>

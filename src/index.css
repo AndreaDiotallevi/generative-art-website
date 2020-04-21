@@ -56,16 +56,18 @@ a {
 }
 
 #home-page-title {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 500;
   margin-bottom: 15px;
   color: white;
   text-transform: uppercase;
+  text-align: left;
 }
 
 .home-page-paragraph {
   color: white;
   margin-bottom: 7px;
+  text-align: left;
 }
 
 .p5Canvas {
@@ -113,7 +115,7 @@ a {
 .navbar-title {
   font-weight: 500;
   font-size: 20px;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 /* PageTitle */
@@ -163,7 +165,7 @@ a {
 }
 
 .project-video:hover {
-  opacity: 0.8;
+  opacity: 0.7;
   transition: 0.3s;
 }
 
@@ -180,12 +182,12 @@ a {
   font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 30px;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 strong {
   font-weight: 500;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .project-overview-component p {
@@ -196,7 +198,7 @@ strong {
   color: black;
   font-weight: 500;
   border-bottom: 1px solid white;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .project-anchors-container a:hover {
@@ -277,13 +279,48 @@ strong {
 
 #artwork-page-title {
   font-weight: 500;
-  font-size: 21px;
+  font-size: 17px;
   margin-bottom: 25px;
 }
 
 #artwork-page-info {
   margin-bottom: 10vw;
   width: 45%;
+}
+
+/* Contact */
+
+.contact-component {
+  display: flex;
+  width: 1010px;
+  margin-bottom: auto;
+}
+
+.profile-photo {
+  width: 485px;
+}
+
+.contact-overview-container {
+  margin-left: 40px;
+}
+
+.contact-overview-container h4 {
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.contact-overview-container p {
+  margin-bottom: 15px;
+}
+
+.email-anchor {
+  border-bottom: 1px solid white;
+  color: black;
+}
+
+.email-anchor:hover {
+  border-bottom: 1px solid black;
+  transition: 0.3s;
 }
 
 /* Footer */
@@ -311,7 +348,7 @@ strong {
 
 #instagram-logo {
   height: 20px;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .footer-copyright {
@@ -436,7 +473,9 @@ strong {
   }
 
   .page-title,
-  .project-name {
+  .project-name,
+  #artwork-page-title,
+  #home-page-title {
     font-size: 16px;
   }
 
@@ -446,19 +485,11 @@ strong {
   }
 
   #artwork-page-title {
-    font-size: 20px;
-  }
-
-  #artwork-page-title {
     margin-bottom: 23px;
   }
 
   #footer-copyright {
     font-size: 14px;
-  }
-
-  #home-page-title {
-    font-size: 19px;
   }
 }
 
@@ -483,7 +514,9 @@ strong {
   }
 
   .page-title,
-  .project-name {
+  .project-name,
+  #artwork-page-title,
+  #home-page-title {
     font-size: 15px;
   }
 
@@ -493,19 +526,11 @@ strong {
   }
 
   #artwork-page-title {
-    font-size: 19px;
-  }
-
-  #artwork-page-title {
     margin-bottom: 21px;
   }
 
   #footer-copyright {
     font-size: 13px;
-  }
-
-  #home-page-title {
-    font-size: 17px;
   }
 }
 
@@ -529,7 +554,9 @@ strong {
   }
 
   .page-title,
-  .project-name {
+  .project-name,
+  #artwork-page-title,
+  #home-page-title {
     font-size: 14px;
   }
 
@@ -539,19 +566,11 @@ strong {
   }
 
   #artwork-page-title {
-    font-size: 18px;
-  }
-
-  #artwork-page-title {
     margin-bottom: 19px;
   }
 
   #footer-copyright {
     font-size: 11px;
-  }
-
-  #home-page-title {
-    font-size: 15px;
   }
 }
 
