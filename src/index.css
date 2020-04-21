@@ -33,11 +33,13 @@ h4 {
 /* Home */
 
 #home-component {
-  height: 100%;
   background-color: rgb(56, 68, 76);
+  height: 100%;
+  width: 100%;
 }
 
 #home-container {
+  text-align: center;
   height: 100%;
 }
 
@@ -73,6 +75,7 @@ h4 {
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid rgb(132, 132, 132, 0.2);
+  width: 100%;
 }
 
 #navbar-container {
@@ -110,46 +113,26 @@ h4 {
   opacity: 0.8;
 }
 
-/* Footer */
+/* PageTitle */
 
-.footer-component {
+.page-title-component {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid rgb(132, 132, 132, 0.2);
+  width: 100%;
 }
 
-#footer-container {
+.page-title-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 1010px;
-  height: 80px;
+  height: 100px;
 }
 
-.footer-left {
-  display: flex;
-  align-items: center;
-}
-
-#instagram-logo {
-  height: 20px;
-  opacity: 0.8;
-}
-
-.footer-copyright {
-  font-size: 15px;
-  font-size: 15px;
-}
-
-#instagram-hyperlink {
-  display: flex;
-  align-items: center;
-}
-
-.icon__fallback-text {
-  visibility: hidden;
-  font-size: 1px;
+.page-title {
+  font-size: 17px;
+  font-style: italic;
 }
 
 /* ProjectList */
@@ -251,7 +234,7 @@ span a:hover {
 #artworks-component {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  /* margin-top: 100px; */
 }
 
 #artworks-container {
@@ -360,6 +343,49 @@ span a:hover {
 .about-description {
   margin-bottom: 10px;
   font-size: 15px;
+}
+
+/* Footer */
+
+.footer-component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgb(132, 132, 132, 0.2);
+  width: 100%;
+}
+
+#footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1010px;
+  height: 80px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+#instagram-logo {
+  height: 20px;
+  opacity: 0.8;
+}
+
+.footer-copyright {
+  font-size: 15px;
+  font-size: 15px;
+}
+
+#instagram-hyperlink {
+  display: flex;
+  align-items: center;
+}
+
+.icon__fallback-text {
+  visibility: hidden;
+  font-size: 1px;
 }
 
 /* Media Queries */
