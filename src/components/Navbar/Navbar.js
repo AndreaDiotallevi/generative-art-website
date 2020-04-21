@@ -30,7 +30,7 @@ const Navbar = (props) => {
               >
                 <p
                   id={`navbar-${route}`}
-                  className={`navbar-link ${getClassName()}`}
+                  className={`navbar-text ${getClassName()}`}
                 >
                   {route}
                 </p>

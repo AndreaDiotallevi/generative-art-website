@@ -3,7 +3,7 @@ import React from "react";
 const pageTitles = {
   "/art": "Generative Artist and Creative Coder",
   "/contact": "About Me",
-  "/dev": "Full Stack Software Developer",
+  "/portfolio": "Full Stack Software Developer",
 };
 
 const PageTitle = ({ history }) => {

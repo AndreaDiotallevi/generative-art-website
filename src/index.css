@@ -97,6 +97,11 @@ a {
   align-items: center;
 }
 
+.navbar-right ul {
+  display: flex;
+  align-items: center;
+}
+
 .navbar-link {
   margin-left: 25px;
 }
