@@ -102,20 +102,23 @@ a {
   align-items: center;
 }
 
-.navbar-text:hover {
-  text-decoration: underline;
-  text-decoration-color: black;
-  transition: 0.3s;
-}
-
 .navbar-text {
   color: black;
   text-transform: uppercase;
   margin-left: 25px;
 }
 
-.active {
+.blog-link {
+  text-transform: uppercase;
+  color: black;
+  margin-left: 25px;
+}
+
+.navbar-text:hover,
+.blog-link:hover {
   text-decoration: underline;
+  text-decoration-color: black;
+  transition: 0.3s;
 }
 
 .navbar-title {
