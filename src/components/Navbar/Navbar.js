@@ -31,43 +31,23 @@ const Navbar = (props) => {
           </Link>
         </div>
         <div className="navbar-right">
-          <Link to="/portfolio">
-            <p
-              id="navbar-portfolio"
-              className={`navbar-text ${getLinkClassName()}`}
-            >
-              Dev Portfolio
-            </p>
+          <Link to="/portfolio" className={`navbar-link ${getLinkClassName()}`}>
+            Dev Portfolio
           </Link>
           <a
             href="https://medium.com/@andreadiotallevi"
             target="_blank"
             rel="noopener noreferrer"
-            className={`navbar-text ${getLinkClassName()}`}
+            className={`navbar-link ${getLinkClassName()}`}
           >
             Blog
           </a>
-          <Link to="/art">
-            <p
-              id="navbar-artworks"
-              className={`navbar-text ${getLinkClassName()}`}
-            >
-              Generative Art
-            </p>
+          <Link to="/art" className={`navbar-link ${getLinkClassName()}`}>
+            Generative Art
           </Link>
-          <Link to="/contact">
-            <p
-              id="navbar-contact"
-              className={`navbar-text ${getLinkClassName()}`}
-            >
-              Contact
-            </p>
+          <Link to="/contact" className={`navbar-link ${getLinkClassName()}`}>
+            Contact
           </Link>
-          {/* <Link to="/">
-            <p id="navbar-home" className={`navbar-text ${getLinkClassName("/")}`}>
-              Home
-            </p>
-          </Link> */}
         </div>
       </div>
     </div>
