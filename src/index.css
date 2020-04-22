@@ -27,14 +27,6 @@ body,
   width: 100%;
 }
 
-/* #root {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-} */
-
 .app {
   display: -webkit-box;
   display: -moz-box;
@@ -126,7 +118,6 @@ body,
   color: black;
   text-transform: uppercase;
   margin-left: 25px;
-  font-size: 13px;
 }
 
 .navbar-text:hover {
@@ -252,6 +243,7 @@ strong {
 .artwork-title {
   margin-bottom: 70px;
   word-break: break-word;
+  /* font-size: 13px; */
 }
 
 .artwork-title:hover {
@@ -278,7 +270,6 @@ strong {
   flex-direction: column;
   align-items: center;
   margin-bottom: auto;
-  margin-top: 100px;
 }
 
 #artwork-container {
@@ -389,7 +380,7 @@ strong {
 }
 
 .footer-copyright {
-  font-size: 13px;
+  font-size: 15px;
 }
 
 #instagram-hyperlink {
@@ -605,16 +596,24 @@ strong {
   }
 }
 
-.home {
-  background-color: rgb(56, 68, 76);
-  border-color: rgb(56, 68, 76);
-  /* border-color: rgb(255, 255, 255, 0.1); */
+.is-home {
   color: white;
   fill: white;
   opacity: 1;
 }
 
-.home:hover {
+.is-home-component {
+  background-color: rgb(56, 68, 76);
+  border-color: rgb(56, 68, 76);
+  opacity: 1;
+}
+
+.is-home:hover {
   text-decoration-color: white;
   transition: 0.3s;
+}
+
+.is-home-description {
+  color: white;
+  opacity: 0.6;
 }

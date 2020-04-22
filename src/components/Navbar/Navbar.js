@@ -2,19 +2,30 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
-  console.log(props);
-  const getClassName = (route) => {
+  const getLinkClassName = (route) => {
     if (props.location.pathname === "/") {
-      return "home";
+      return "is-home";
+    }
+  };
+
+  const getComponentClassName = (route) => {
+    if (props.location.pathname === "/") {
+      return "is-home-component";
     }
   };
 
   return (
-    <div id="navbar-component" className={`navbar-component ${getClassName()}`}>
+    <div
+      id="navbar-component"
+      className={`navbar-component ${getComponentClassName()}`}
+    >
       <div id="navbar-container">
         <div className="navbar-left">
           <Link to="/">
-            <h1 id="navbar-title" className={`navbar-title ${getClassName()}`}>
+            <h1
+              id="navbar-title"
+              className={`navbar-title ${getLinkClassName()}`}
+            >
               ANDREA DIOTALLEVI
             </h1>
           </Link>
@@ -23,7 +34,7 @@ const Navbar = (props) => {
           <Link to="/portfolio">
             <p
               id="navbar-portfolio"
-              className={`navbar-text ${getClassName()}`}
+              className={`navbar-text ${getLinkClassName()}`}
             >
               Dev Portfolio
             </p>
@@ -32,22 +43,28 @@ const Navbar = (props) => {
             href="https://medium.com/@andreadiotallevi"
             target="_blank"
             rel="noopener noreferrer"
-            className={`navbar-text ${getClassName()}`}
+            className={`navbar-text ${getLinkClassName()}`}
           >
             Blog
           </a>
           <Link to="/art">
-            <p id="navbar-artworks" className={`navbar-text ${getClassName()}`}>
+            <p
+              id="navbar-artworks"
+              className={`navbar-text ${getLinkClassName()}`}
+            >
               Generative Art
             </p>
           </Link>
           <Link to="/contact">
-            <p id="navbar-contact" className={`navbar-text ${getClassName()}`}>
+            <p
+              id="navbar-contact"
+              className={`navbar-text ${getLinkClassName()}`}
+            >
               Contact
             </p>
           </Link>
           {/* <Link to="/">
-            <p id="navbar-home" className={`navbar-text ${getClassName("/")}`}>
+            <p id="navbar-home" className={`navbar-text ${getLinkClassName("/")}`}>
               Home
             </p>
           </Link> */}

@@ -1,21 +1,32 @@
 import React from "react";
 
 const Footer = (props) => {
-  const getClassName = () => {
+  const getLinkClassName = () => {
     if (props.location.pathname === "/") {
-      return "home";
+      return "is-home";
+    }
+
+    return undefined;
+  };
+
+  const getComponentClassName = () => {
+    if (props.location.pathname === "/") {
+      return "is-home-component";
     }
 
     return undefined;
   };
 
   return (
-    <div id="footer-component" className={`footer-component ${getClassName()}`}>
+    <div
+      id="footer-component"
+      className={`footer-component ${getComponentClassName()}`}
+    >
       <div id="footer-container">
         <div className="footer-left">
           <p
             id="footer-copyright"
-            className={`footer-copyright ${getClassName()}`}
+            className={`footer-copyright ${getLinkClassName()}`}
           >
             © 2020, ANDREA DIOTALLEVI
           </p>
@@ -26,7 +37,7 @@ const Footer = (props) => {
             id="instagram-hyperlink"
             target="_blank"
             rel="noopener noreferrer"
-            className={getClassName()}
+            className={getLinkClassName()}
           >
             <span className="icon__fallback-text">Instagram</span>
             <svg

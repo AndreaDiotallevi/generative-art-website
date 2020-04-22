@@ -11,22 +11,26 @@ class Moonlight extends React.Component {
   };
 
   draw = (p5) => {
-    let height = document.getElementById("home-container").offsetHeight;
-    p5.translate(p5.windowWidth / 2, height / 2);
-    const w = p5.min(p5.windowWidth, height);
-    const n = p5.noise;
+    if (this.t > 0) {
+      let height = document.getElementById("home-container").offsetHeight;
+      p5.translate(p5.windowWidth / 2, height / 2);
+      const w = p5.min(p5.windowWidth, height);
+      const n = p5.noise;
 
-    let a = 0.45 * w;
-    let b = n(this.t) * 6;
-    let c = n(this.t++ + 60) * 6;
+      let a = 0.48 * w;
+      let b = n(this.t) * 6;
+      let c = n(this.t + 60) * 6;
 
-    p5.noFill();
-    p5.stroke(255, 10);
-    p5.line(p5.cos(b) * a, p5.sin(b) * a, p5.cos(c) * a, p5.sin(c) * a);
+      p5.noFill();
+      p5.stroke(255, 25);
+      p5.line(p5.cos(b) * a, p5.sin(b) * a, p5.cos(c) * a, p5.sin(c) * a);
+    }
+
+    this.t++;
   };
 
   mouseClicked = (p5) => {
-    p5.noiseSeed(p5.random());
+    p5.noiseSeed(p5.random(1000));
     p5.background(56, 68, 76);
     this.t = 0;
     p5.draw();
@@ -34,7 +38,7 @@ class Moonlight extends React.Component {
 
   windowResized = (p5) => {
     p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
-    p5.noiseSeed(p5.random());
+    p5.noiseSeed(p5.random(1000));
     p5.background(56, 68, 76);
     this.t = 0;
     p5.draw();
