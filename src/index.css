@@ -11,7 +11,6 @@ h1,
 h2,
 h3,
 h4 {
-  color: rgb(61, 66, 70);
   color: black;
 }
 
@@ -19,41 +18,61 @@ a {
   text-decoration: none;
 }
 
+body,
 #root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* #root {
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-}
+} */
 
 .app {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
+  width: 100%;
+  min-height: 100vh;
 }
 
 /* Home */
 
 #home-component {
+  display: flex;
+  justify-content: center;
   background-color: rgb(56, 68, 76);
-  height: 100%;
+  margin-bottom: auto;
   width: 100%;
+  flex: 1;
 }
 
 #home-container {
-  text-align: center;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1010px;
 }
 
-#home-page-text {
+/* #home-page-text {
   position: absolute;
   width: 400px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+} */
 
 #home-page-title {
   font-size: 17px;
@@ -70,6 +89,7 @@ a {
   text-align: left;
 }
 
+.react-p5,
 .p5Canvas {
   height: 100%;
 }
@@ -142,6 +162,7 @@ a {
   font-size: 17px;
   color: grey;
   text-transform: lowercase;
+  text-align: center;
 }
 
 /* ProjectList */
@@ -296,19 +317,24 @@ strong {
 .contact-component {
   display: flex;
   justify-content: center;
-  width: 100%;
   margin-bottom: auto;
+  width: 100%;
+  flex: auto;
 }
 
 .contact-container {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   width: 1010px;
+  margin-bottom: 100px;
 }
 
 .profile-photo {
-  width: 485px;
+  display: block;
+  max-width: 485px;
+  max-height: 485px;
+  width: auto;
+  height: auto;
 }
 
 .contact-overview-container {
@@ -317,7 +343,6 @@ strong {
 }
 
 .contact-overview-container h4 {
-  /* font-size: 17px; */
   margin-bottom: 15px;
 }
 
@@ -384,6 +409,7 @@ strong {
   #artworks-container,
   #footer-container,
   #artwork-container,
+  .page-title-container,
   .contact-container,
   .project-list-item,
   .project-video {
@@ -420,6 +446,7 @@ strong {
   #artworks-container,
   #footer-container,
   #artwork-container,
+  .page-title-container,
   .project-list-item,
   .project-video,
   .profile-photo,
@@ -429,11 +456,6 @@ strong {
 
   #artwork-container {
     margin-bottom: 16.21vw;
-  }
-
-  #artworks-component,
-  #artwork-component {
-    margin-top: 16.21vw;
   }
 
   .artwork-image {
@@ -447,10 +469,6 @@ strong {
 
   .artwork-title {
     margin-bottom: 9.45vw;
-  }
-
-  #profile-image {
-    height: 41vw;
   }
 
   #artwork-container {
@@ -590,6 +608,7 @@ strong {
 .home {
   background-color: rgb(56, 68, 76);
   border-color: rgb(56, 68, 76);
+  /* border-color: rgb(255, 255, 255, 0.1); */
   color: white;
   fill: white;
   opacity: 1;

@@ -5,7 +5,7 @@ const Home = (props) => {
   return (
     <div id="home-component">
       <div id="home-container">
-        <div id="home-page-text">
+        {/* <div id="home-page-text">
           <h3 id="home-page-title">Hello! My name is Andrea.</h3>
           <p className="home-page-paragraph" id="home-page-paragraph-1">
             I am a software engineer and generative artist based in London.
@@ -20,7 +20,7 @@ const Home = (props) => {
             and I design custom algorithms capable of generating a sequence of
             unique but aesthetically related images.
           </p>
-        </div>
+        </div> */}
         <Moonlight />
       </div>
     </div>
