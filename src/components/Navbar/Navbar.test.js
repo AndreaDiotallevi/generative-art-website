@@ -6,7 +6,7 @@ describe("Navbar", () => {
   let wrapper;
 
   describe("When not in Home", () => {
-    let props = { location: { pathname: "/artworks" } };
+    let props = { history: { location: { pathname: "/artworks" } } };
 
     beforeEach(() => {
       wrapper = shallow(<Navbar {...props} />);
@@ -16,15 +16,10 @@ describe("Navbar", () => {
       const h1 = wrapper.find({ id: "navbar-title" });
       expect(h1.text()).toEqual("ANDREA DIOTALLEVI");
     });
-
-    it("should render the contact navbar link", () => {
-      const homeLink = wrapper.find({ id: "navbar-contact" });
-      expect(homeLink.text()).toEqual("Contact");
-    });
   });
 
   describe("When in Home", () => {
-    let props = { location: { pathname: "/" } };
+    let props = { history: { location: { pathname: "/" } } };
 
     beforeEach(() => {
       wrapper = shallow(<Navbar {...props} />);

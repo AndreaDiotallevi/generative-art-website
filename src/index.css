@@ -58,14 +58,6 @@ body,
   width: 1010px;
 }
 
-/* #home-page-text {
-  position: absolute;
-  width: 400px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
-
 #home-page-title {
   font-size: 17px;
   font-weight: 500;
@@ -128,8 +120,141 @@ body,
 
 .navbar-title {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 25px;
   opacity: 0.7;
+  white-space: nowrap;
+}
+
+/* MenuToggleButton */
+
+.toggle-button {
+  width: 20px;
+  height: 15px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+
+.toggle-button span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: black;
+  border-radius: 9px;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.toggle-button span:nth-child(1) {
+  top: 0px;
+  opacity: 0.7;
+}
+
+.toggle-button span:nth-child(2),
+.toggle-button span:nth-child(3) {
+  top: 6px;
+  opacity: 0.45;
+}
+
+.toggle-button span:nth-child(4) {
+  top: 12px;
+  opacity: 0.7;
+}
+
+.toggle-button.menu-open span:nth-child(1) {
+  top: 6px;
+  width: 0%;
+  left: 50%;
+}
+
+.toggle-button.menu-open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  opacity: 0.7;
+}
+
+.toggle-button.menu-open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  opacity: 0.7;
+}
+
+.toggle-button.menu-open span:nth-child(4) {
+  top: 6px;
+  width: 0%;
+  left: 50%;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button-line {
+  width: 20px;
+  height: 2px;
+  background: black;
+  opacity: 0.7;
+}
+
+.menu-open.line-top {
+  transform: rotate(45deg);
+  transform-origin: top left;
+  margin-bottom: 5px;
+}
+
+.menu-open.line-bottom {
+  transform: rotate(-45deg);
+  transform-origin: top left;
+  margin-top: 5px;
+}
+
+/* Menu */
+
+.menu-component {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.menu-component ul {
+  width: 1010px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* MenuItem */
+
+.menu-item {
+  color: black;
+  font-size: 15px;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgb(132, 132, 132, 0.2);
+}
+
+.menu-item:hover {
+  text-decoration: underline;
 }
 
 /* PageTitle */
@@ -395,6 +520,12 @@ strong {
 
 /* Media Queries */
 
+@media (min-width: 1090px) {
+  .toggle-button {
+    display: none;
+  }
+}
+
 @media (max-width: 1090px) {
   #navbar-container,
   #artworks-container,
@@ -403,7 +534,8 @@ strong {
   .page-title-container,
   .contact-container,
   .project-list-item,
-  .project-video {
+  .project-video,
+  .menu-component ul {
     width: 660px;
   }
 
@@ -430,6 +562,10 @@ strong {
     margin-left: 0;
     margin-bottom: 30px;
   }
+
+  .navbar-link {
+    display: none;
+  }
 }
 
 @media (max-width: 740px) {
@@ -441,7 +577,8 @@ strong {
   .project-list-item,
   .project-video,
   .profile-photo,
-  .contact-overview-container {
+  .contact-overview-container,
+  .menu-component ul {
     width: 88vw;
   }
 
@@ -497,7 +634,7 @@ strong {
   }
 
   .navbar-title {
-    font-size: 19px;
+    font-size: 24px;
   }
 
   .page-title,
@@ -528,7 +665,8 @@ strong {
   .project-anchors-container a,
   #footer-copyright,
   .contact-overview-container p,
-  .contact-overview-container a {
+  .contact-overview-container a,
+  .menu-item {
     font-size: 13px;
   }
 
@@ -537,7 +675,7 @@ strong {
   }
 
   .navbar-title {
-    font-size: 18px;
+    font-size: 23px;
   }
 
   .page-title,
@@ -567,7 +705,8 @@ strong {
   .project-anchors-container a,
   #footer-copyright,
   .contact-overview-container p,
-  .contact-overview-container a {
+  .contact-overview-container a,
+  .menu-item {
     font-size: 11px;
   }
 
@@ -576,7 +715,7 @@ strong {
   }
 
   .navbar-title {
-    font-size: 17px;
+    font-size: 22px;
   }
 
   .page-title,
@@ -616,4 +755,18 @@ strong {
 .is-home-description {
   color: white;
   opacity: 0.6;
+}
+
+.is-home-button {
+  background-color: rgb(56, 68, 76);
+}
+
+.is-home-button span {
+  background-color: white;
+  opacity: 1;
+}
+
+.is-home-component ul a {
+  color: white;
+  border-color: rgb(56, 68, 76);
 }

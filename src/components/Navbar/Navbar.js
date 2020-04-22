@@ -1,15 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import MenuToggleButton from "../MenuToggleButton/MenuToggleButton";
 
-const Navbar = (props) => {
-  const getLinkClassName = (route) => {
-    if (props.location.pathname === "/") {
+const Navbar = ({ open, onClick, history }) => {
+  const getLinkClassName = () => {
+    if (history.location.pathname === "/") {
       return "is-home";
     }
   };
 
-  const getComponentClassName = (route) => {
-    if (props.location.pathname === "/") {
+  const getComponentClassName = () => {
+    if (history.location.pathname === "/") {
       return "is-home-component";
     }
   };
@@ -32,7 +33,10 @@ const Navbar = (props) => {
         </div>
         <div className="navbar-right">
           <Link to="/portfolio" className={`navbar-link ${getLinkClassName()}`}>
-            Dev Portfolio
+            Web Development Portfolio
+          </Link>
+          <Link to="/art" className={`navbar-link ${getLinkClassName()}`}>
+            Generative Art
           </Link>
           <a
             href="https://medium.com/@andreadiotallevi"
@@ -42,12 +46,13 @@ const Navbar = (props) => {
           >
             Blog
           </a>
-          <Link to="/art" className={`navbar-link ${getLinkClassName()}`}>
-            Generative Art
-          </Link>
           <Link to="/contact" className={`navbar-link ${getLinkClassName()}`}>
             Contact
           </Link>
+          <Link to="/" className={`navbar-link ${getLinkClassName()}`}>
+            Home
+          </Link>
+          <MenuToggleButton open={open} onClick={onClick} history={history} />
         </div>
       </div>
     </div>
