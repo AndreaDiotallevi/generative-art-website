@@ -30,9 +30,9 @@ describe("Navbar", () => {
       wrapper = shallow(<Navbar {...props} />);
     });
 
-    it("should render the navbar component with the class home", () => {
+    it("should render the navbar component with the class is-home-component", () => {
       const div = wrapper.find({ id: "navbar-component" });
-      expect(div.hasClass("home")).toEqual(true);
+      expect(div.hasClass("is-home-component")).toEqual(true);
     });
   });
 });
