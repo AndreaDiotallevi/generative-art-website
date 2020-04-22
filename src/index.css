@@ -39,6 +39,17 @@ body,
   min-height: 100vh;
 }
 
+/* Key Frames */
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* Home */
 
 #home-component {
@@ -255,6 +266,11 @@ body,
 
 .menu-item:hover {
   text-decoration: underline;
+  transition: 0.3s;
+}
+
+.menu-item {
+  animation: 1s appear forwards;
 }
 
 /* PageTitle */
@@ -286,14 +302,12 @@ body,
 .project-list-component {
   display: flex;
   flex-direction: column;
+  animation: 1s appear forwards;
 }
 
 .project-list-item {
   display: flex;
   width: 1010px;
-}
-
-.project-list-item {
   margin-bottom: 100px;
 }
 
@@ -355,6 +369,7 @@ strong {
 #artworks-component {
   display: flex;
   justify-content: center;
+  animation: 1s appear forwards;
 }
 
 #artworks-container {
@@ -436,6 +451,7 @@ strong {
   margin-bottom: auto;
   width: 100%;
   flex: auto;
+  animation: 1s appear forwards;
 }
 
 .contact-container {
