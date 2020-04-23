@@ -87,6 +87,7 @@ body,
 .react-p5,
 .p5Canvas {
   height: 100%;
+  width: 100%;
 }
 
 /* Navbar */
@@ -152,7 +153,6 @@ body,
   transition: 0.5s ease-in-out;
   cursor: pointer;
   border: none;
-  background-color: white;
 }
 
 .toggle-button span {
@@ -516,9 +516,9 @@ strong {
   align-items: center;
 }
 
-#instagram-logo {
+.instagram-logo {
   height: 20px;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .footer-copyright {
@@ -548,6 +548,7 @@ strong {
   #artworks-container,
   #footer-container,
   #artwork-container,
+  #home-container,
   .page-title-container,
   .contact-container,
   .project-list-item,
@@ -590,6 +591,7 @@ strong {
   #artworks-container,
   #footer-container,
   #artwork-container,
+  #home-container,
   .page-title-container,
   .project-list-item,
   .project-video,
@@ -781,7 +783,14 @@ strong {
   background-color: rgb(56, 68, 76);
 }
 
-.is-home-button span {
+.is-home-button span:nth-child(1),
+.is-home-button span:nth-child(2),
+.is-home-button span:nth-child(3),
+.is-home-button span:nth-child(4),
+.toggle-button.menu-open span:nth-child(1),
+.toggle-button.menu-open span:nth-child(2),
+.toggle-button.menu-open span:nth-child(3),
+.toggle-button.menu-open span:nth-child(4) {
   background-color: white;
   opacity: 1;
 }
