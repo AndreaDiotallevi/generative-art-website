@@ -5,19 +5,22 @@ class Moonlight extends React.Component {
   t = 0;
 
   setup = (p5, canvasParentRef) => {
-    let height = document.getElementById("home-container").offsetHeight;
-    p5.createCanvas(p5.windowWidth, height).parent(canvasParentRef);
+    const height = document.getElementById("home-container").offsetHeight;
+    const width = document.getElementById("home-container").offsetWidth;
+    p5.createCanvas(width, height).parent(canvasParentRef);
     p5.background(56, 68, 76);
   };
 
   draw = (p5) => {
     if (this.t > 0) {
-      let height = document.getElementById("home-container").offsetHeight;
-      p5.translate(p5.windowWidth / 2, height / 2);
-      const w = p5.min(p5.windowWidth, height);
+      const height = document.getElementById("home-container").offsetHeight;
+      const width = document.getElementById("home-container").offsetWidth;
+
+      p5.translate(width / 2, height / 2);
+      const w = p5.min(width, height);
       const n = p5.noise;
 
-      let a = 0.48 * w;
+      const a = 0.48 * w;
       let b = n(this.t) * 6;
       let c = n(this.t + 60) * 6;
 
@@ -36,12 +39,23 @@ class Moonlight extends React.Component {
     p5.draw();
   };
 
+  windowResized = (p5) => {
+    const height = document.getElementById("home-container").offsetHeight;
+    const width = document.getElementById("home-container").offsetWidth;
+    p5.resizeCanvas(width, height);
+    p5.noiseSeed(p5.random());
+    p5.background(56, 68, 76);
+    this.t = 0;
+    p5.draw();
+  };
+
   render() {
     return (
       <Sketch
         setup={this.setup}
         draw={this.draw}
         mouseClicked={this.mouseClicked}
+        windowResized={this.windowResized}
       />
     );
   }
