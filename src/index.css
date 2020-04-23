@@ -50,6 +50,15 @@ body,
   }
 }
 
+@keyframes slideIn {
+  0% {
+    transform: translateY(3%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /* Home */
 
 #home-component {
@@ -304,6 +313,7 @@ body,
   display: flex;
   flex-direction: column;
   animation: 1s appear forwards;
+  /* animation: 1s slideIn forwards; */
 }
 
 .project-list-item {
@@ -371,6 +381,7 @@ strong {
   display: flex;
   justify-content: center;
   animation: 1s appear forwards;
+  /* animation: 1s slideIn forwards; */
 }
 
 #artworks-container {
@@ -384,7 +395,6 @@ strong {
 .artwork-title {
   margin-bottom: 70px;
   word-break: break-word;
-  /* font-size: 13px; */
 }
 
 .artwork-title:hover {
