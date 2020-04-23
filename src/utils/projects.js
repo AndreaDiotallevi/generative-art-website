@@ -25,7 +25,7 @@ const projects = [
     name: "Generative Art",
     overview:
       "A section of this website showcasing my personal generative art experimentations. The sketches have been produced with p5.js, a Javascript client-side library for creating graphic and interactive experiences, based on the core principles of Processing.",
-    videoUrl: "generative-art.mov",
+    videoUrl: "andreadiotallevi.mov",
     demoUrl: "https://www.andreadiotallevi.com",
     githubUrl: "https://github.com/AndreaDiotallevi/andreadiotallevi.com",
     devTechnologies: "React, NodeJS, JavaScript, p5.js",
