@@ -36,21 +36,12 @@ class Moonlight extends React.Component {
     p5.draw();
   };
 
-  windowResized = (p5) => {
-    p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
-    p5.noiseSeed(p5.random(1000));
-    p5.background(56, 68, 76);
-    this.t = 0;
-    p5.draw();
-  };
-
   render() {
     return (
       <Sketch
         setup={this.setup}
         draw={this.draw}
         mouseClicked={this.mouseClicked}
-        windowResized={this.windowResized}
       />
     );
   }
