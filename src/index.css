@@ -153,6 +153,7 @@ body,
   transition: 0.5s ease-in-out;
   cursor: pointer;
   border: none;
+  background-color: white;
 }
 
 .toggle-button span {
