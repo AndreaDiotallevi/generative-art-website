@@ -1,16 +1,9 @@
 import React from "react";
 import MenuItem from "../MenuItem/MenuItem";
-
-const menuItems = [
-  { name: "Web Development Portfolio", route: "/portfolio" },
-  { name: "Generative Art", route: "/art" },
-  { name: "Contact", route: "/contact" },
-  { name: "Home", route: "/" },
-];
+import routes from "../../utils/routes";
 
 const Menu = ({ open, onClick, history }) => {
   const getButtonClassName = () => {
-    console.log("here");
     if (history.location.pathname === "/") {
       return "is-home-component";
     }
@@ -20,7 +13,7 @@ const Menu = ({ open, onClick, history }) => {
     if (open) {
       return (
         <ul>
-          {menuItems.map((item, index) => (
+          {routes.map((item, index) => (
             <MenuItem key={index} onClick={onClick} item={item} />
           ))}
         </ul>
