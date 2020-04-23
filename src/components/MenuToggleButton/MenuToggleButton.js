@@ -10,10 +10,6 @@ const MenuToggleButton = ({ open, onClick, history }) => {
       classes += " menu-open";
     }
 
-    if (history.location.pathname === "/") {
-      classes += " is-home-button";
-    }
-
     return classes;
   };
 
