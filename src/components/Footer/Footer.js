@@ -37,11 +37,10 @@ const Footer = (props) => {
             id="instagram-hyperlink"
             target="_blank"
             rel="noopener noreferrer"
-            className={getLinkClassName()}
           >
             <span className="icon__fallback-text">Instagram</span>
             <svg
-              id="instagram-logo"
+              className={`instagram-logo ${getLinkClassName()}`}
               aria-hidden="true"
               focusable="false"
               role="presentation"
