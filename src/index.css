@@ -153,7 +153,7 @@ body,
   transition: 0.5s ease-in-out;
   cursor: pointer;
   border: none;
-  background-color: white;
+  background-color: transparent;
 }
 
 .toggle-button span {
@@ -161,7 +161,7 @@ body,
   position: absolute;
   height: 2px;
   width: 100%;
-  background: black;
+  background-color: black;
   border-radius: 9px;
   left: 0;
   -webkit-transform: rotate(0deg);
@@ -780,18 +780,14 @@ strong {
   opacity: 0.6;
 }
 
-.is-home-button {
-  background-color: rgb(56, 68, 76);
-}
-
 .is-home-button span:nth-child(1),
 .is-home-button span:nth-child(2),
 .is-home-button span:nth-child(3),
 .is-home-button span:nth-child(4),
-.toggle-button.menu-open span:nth-child(1),
-.toggle-button.menu-open span:nth-child(2),
-.toggle-button.menu-open span:nth-child(3),
-.toggle-button.menu-open span:nth-child(4) {
+.toggle-button.menu-open.is-home-button span:nth-child(1),
+.toggle-button.menu-open.is-home-button span:nth-child(2),
+.toggle-button.menu-open.is-home-button span:nth-child(3),
+.toggle-button.menu-open.is-home-button span:nth-child(4) {
   background-color: white;
   opacity: 1;
 }
