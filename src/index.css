@@ -410,6 +410,7 @@ strong {
   flex-direction: column;
   align-items: center;
   margin-bottom: auto;
+  animation: 1s appear forwards;
 }
 
 #artwork-container {
@@ -435,7 +436,7 @@ strong {
 #artwork-page-title {
   font-weight: 500;
   font-size: 17px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 #artwork-page-info {
@@ -665,8 +666,9 @@ strong {
     height: 75px;
   }
 
-  #artwork-page-title {
-    margin-bottom: 23px;
+  #artwork-page-title,
+  .project-name {
+    margin-bottom: 27px;
   }
 }
 
@@ -706,8 +708,9 @@ strong {
     height: 70px;
   }
 
-  #artwork-page-title {
-    margin-bottom: 21px;
+  #artwork-page-title,
+  .project-name {
+    margin-bottom: 24px;
   }
 }
 
@@ -746,8 +749,9 @@ strong {
     height: 65px;
   }
 
-  #artwork-page-title {
-    margin-bottom: 19px;
+  #artwork-page-title,
+  .project-name {
+    margin-bottom: 21px;
   }
 }
 
