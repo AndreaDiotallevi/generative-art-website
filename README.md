@@ -1,12 +1,12 @@
 [![CircleCI](https://circleci.com/gh/AndreaDiotallevi/website.svg?style=shield)](https://circleci.com/gh/AndreaDiotallevi/andreadiotallevi.com) [![Test Coverage](https://api.codeclimate.com/v1/badges/3da069d854d6c628e1b1/test_coverage)](https://codeclimate.com/github/AndreaDiotallevi/andreadiotallevi.com/test_coverage)
 
-# My Generative Art Website
+# My Website
 
 [Description](#description) | [Live Website](#live-website) | [Getting Started](#getting-started) | [How to Run the Tests](#how-to-run-the-tests) | [How to Run the App](#how-to-run-the-app) | [Technologies Used](#technologies-used) | [Continuous Integration](#continuous-integration)
 
 ## Description
 
-This is a React single page application, showcasing my [generative art](https://github.com/AndreaDiotallevi/generative-art) experimentations.
+This is a React single page application, showcasing my software development portfolio and [generative art](https://github.com/AndreaDiotallevi/generative-art) experimentations.
 
 ## Live Website
 
