@@ -33,9 +33,7 @@ class Artwork extends React.Component {
         <div id="artwork-container">
           <div id="artwork-page-images">{this.renderImages()}</div>
           <div id="artwork-page-info">
-            <h3 id="artwork-page-title">
-              {this.title.replace("-", " ").toUpperCase()}
-            </h3>
+            <h3 id="artwork-page-title">{this.title.replace("-", " ")}</h3>
             <p id="artwork-page-description">{this.artwork.description}</p>
           </div>
         </div>

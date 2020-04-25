@@ -33,7 +33,7 @@ const Navbar = ({ open, onClick, history }) => {
         </div>
         <div className="navbar-right">
           <Link to="/portfolio" className={`navbar-link ${getLinkClassName()}`}>
-            Web Development Portfolio
+            Dev Portfolio
           </Link>
           <Link to="/art" className={`navbar-link ${getLinkClassName()}`}>
             Generative Art
