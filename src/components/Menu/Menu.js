@@ -14,7 +14,12 @@ const Menu = ({ open, onClick, history }) => {
       return (
         <ul>
           {routes.map((item, index) => (
-            <MenuItem key={index} onClick={onClick} item={item} />
+            <MenuItem
+              key={index}
+              onClick={onClick}
+              item={item}
+              history={history}
+            />
           ))}
         </ul>
       );

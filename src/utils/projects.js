@@ -8,7 +8,7 @@ const projects = [
     githubUrl: "https://github.com/AndreaDiotallevi/the-movie-mapper",
     devTechnologies: "React, NodeJS, JavaScript, Python, Beautiful Soup",
     apis: "Google Maps, LocationIQ, OMDb",
-    testingTechnologies: "Jest, Enzyme, CircleCI, AWS Amplify",
+    testingTechnologies: "Jest, Enzyme, CircleCI, AWS",
   },
   {
     name: "Albums Manager",

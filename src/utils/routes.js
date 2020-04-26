@@ -1,6 +1,6 @@
 const routes = [
   {
-    menuName: "Web Development Portfolio",
+    menuName: "Dev Portfolio",
     baseUrl: "/portfolio",
     pageTitle: "",
   },
@@ -10,6 +10,11 @@ const routes = [
     pageTitle: "",
   },
   { menuName: "Contact", baseUrl: "/contact", pageTitle: "" },
+  // {
+  //   menuName: "Blog",
+  //   baseUrl: "/blog",
+  //   pageTitle: "Blog under construction - check out my medium blog!",
+  // },
   {
     menuName: "Home",
     baseUrl: "/",

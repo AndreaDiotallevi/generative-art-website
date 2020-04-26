@@ -4,13 +4,13 @@ import routes from "../../utils/routes";
 const PageTitle = ({ history }) => {
   const pathname = history.location.pathname;
 
-  const getComponentClassName = (route) => {
+  const getComponentClassName = () => {
     if (pathname === "/") {
       return "is-home-component";
     }
   };
 
-  const getDescriptionClassName = (route) => {
+  const getDescriptionClassName = () => {
     if (pathname === "/") {
       return "is-home-description";
     }

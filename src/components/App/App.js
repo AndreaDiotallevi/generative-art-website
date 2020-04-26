@@ -10,6 +10,7 @@ import Artwork from "../Artwork/Artwork";
 import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
 import Menu from "../Menu/Menu";
+// import Blog from "../Blog/Blog";
 
 class App extends React.Component {
   state = {
@@ -46,13 +47,14 @@ class App extends React.Component {
               />
             )}
           />
-          <Route component={PageTitle}></Route>
-          <Route path="/" exact component={Home}></Route>
-          <Route path="/portfolio" exact component={ProjectList}></Route>
-          <Route path="/art" exact component={Artworks}></Route>
-          <Route path="/art/:title" component={Artwork}></Route>
-          <Route path="/contact" exact component={Contact}></Route>
-          <Route component={Footer}></Route>
+          <Route component={PageTitle} />
+          <Route path="/" exact component={Home} />
+          <Route path="/portfolio" exact component={ProjectList} />
+          <Route path="/art" exact component={Artworks} />
+          <Route path="/art/:title" component={Artwork} />
+          <Route path="/contact" exact component={Contact} />
+          {/* <Route path="/blog" exact component={Blog} /> */}
+          <Route component={Footer} />
         </BrowserRouter>
       </div>
     );

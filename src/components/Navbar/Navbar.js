@@ -1,12 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import MenuToggleButton from "../MenuToggleButton/MenuToggleButton";
+import routes from "../../utils/routes";
 
 const Navbar = ({ open, onClick, history }) => {
-  const getLinkClassName = () => {
-    if (history.location.pathname === "/") {
-      return "is-home";
+  const pathname = history.location.pathname;
+
+  const getLinkClassName = (url) => {
+    let classes = "";
+
+    if (pathname === "/") {
+      classes += " is-home";
     }
+
+    if (pathname.includes(url) && url !== "/") {
+      classes += " link-active";
+    } else if (pathname === "/" && url === "/") {
+      classes += " link-active";
+    }
+
+    return classes;
   };
 
   const getComponentClassName = () => {
@@ -32,12 +45,15 @@ const Navbar = ({ open, onClick, history }) => {
           </Link>
         </div>
         <div className="navbar-right">
-          <Link to="/portfolio" className={`navbar-link ${getLinkClassName()}`}>
-            Dev Portfolio
-          </Link>
-          <Link to="/art" className={`navbar-link ${getLinkClassName()}`}>
-            Generative Art
-          </Link>
+          {routes.map((route) => (
+            <Link
+              to={route.baseUrl}
+              className={`navbar-link ${getLinkClassName(route.baseUrl)}`}
+              key={route.menuName}
+            >
+              {route.menuName}
+            </Link>
+          ))}
           <a
             href="https://medium.com/@andreadiotallevi"
             target="_blank"
@@ -46,12 +62,6 @@ const Navbar = ({ open, onClick, history }) => {
           >
             Blog
           </a>
-          <Link to="/contact" className={`navbar-link ${getLinkClassName()}`}>
-            Contact
-          </Link>
-          <Link to="/" className={`navbar-link ${getLinkClassName()}`}>
-            Home
-          </Link>
           <MenuToggleButton open={open} onClick={onClick} history={history} />
         </div>
       </div>
