@@ -3,24 +3,48 @@ import MenuItem from "../MenuItem/MenuItem";
 import routes from "../../utils/routes";
 
 const Menu = ({ open, onClick, history }) => {
+  const pathname = history.location.pathname;
+
   const getButtonClassName = () => {
-    if (history.location.pathname === "/") {
+    if (pathname === "/") {
       return "is-home-component";
     }
+  };
+
+  const getLinkClassName = (url) => {
+    let classes = "";
+
+    if (pathname.includes(url) && url !== "/") {
+      classes += "link-active";
+    } else if (pathname === "/" && url === "/") {
+      classes += "link-active";
+    }
+
+    return classes;
   };
 
   const renderList = () => {
     if (open) {
       return (
         <ul>
-          {routes.map((item, index) => (
-            <MenuItem
-              key={index}
-              onClick={onClick}
-              item={item}
-              history={history}
-            />
-          ))}
+          <React.Fragment>
+            {routes.map((item, index) => (
+              <MenuItem
+                key={index}
+                onClick={onClick}
+                item={item}
+                history={history}
+              />
+            ))}
+            <a
+              href="https://medium.com/@andreadiotallevi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`menu-item ${getLinkClassName()}`}
+            >
+              Blog
+            </a>
+          </React.Fragment>
         </ul>
       );
     } else {

@@ -307,6 +307,10 @@ body,
   color: rgb(155, 155, 155);
 }
 
+.menu-component :nth-child(4) {
+  order: 2;
+}
+
 /* PageTitle */
 
 .page-title-component {
@@ -598,7 +602,8 @@ strong {
 /* Media Queries */
 
 @media (min-width: 1090px) {
-  .toggle-button {
+  .toggle-button,
+  .menu-component {
     display: none;
   }
 }
