@@ -11,40 +11,18 @@ const Menu = ({ open, onClick, history }) => {
     }
   };
 
-  const getLinkClassName = (url) => {
-    let classes = "";
-
-    if (pathname.includes(url) && url !== "/") {
-      classes += "link-active";
-    } else if (pathname === "/" && url === "/") {
-      classes += "link-active";
-    }
-
-    return classes;
-  };
-
   const renderList = () => {
     if (open) {
       return (
         <ul>
-          <React.Fragment>
-            {routes.map((item, index) => (
-              <MenuItem
-                key={index}
-                onClick={onClick}
-                item={item}
-                history={history}
-              />
-            ))}
-            <a
-              href="https://medium.com/@andreadiotallevi"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`menu-item ${getLinkClassName()}`}
-            >
-              Blog
-            </a>
-          </React.Fragment>
+          {routes.map((item, index) => (
+            <MenuItem
+              key={index}
+              onClick={onClick}
+              item={item}
+              history={history}
+            />
+          ))}
         </ul>
       );
     } else {
