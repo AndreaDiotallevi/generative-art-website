@@ -4,7 +4,7 @@ const routes = [
     baseUrl: "/art",
     pageTitle: "Generative Artist and Creative Coder",
   },
-  { menuName: "Contact", baseUrl: "/contact", pageTitle: "" },
+  { menuName: "Contact", baseUrl: "/contact", pageTitle: "About Me" },
   {
     menuName: "Home",
     baseUrl: "/",
