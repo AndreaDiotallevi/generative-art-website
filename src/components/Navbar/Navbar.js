@@ -54,14 +54,6 @@ const Navbar = ({ open, onClick, history }) => {
               {route.menuName}
             </Link>
           ))}
-          <a
-            href="https://medium.com/@andreadiotallevi"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`navbar-link ${getLinkClassName()}`}
-          >
-            Blog
-          </a>
           <MenuToggleButton open={open} onClick={onClick} history={history} />
         </div>
       </div>
