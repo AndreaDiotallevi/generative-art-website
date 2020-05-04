@@ -2,18 +2,13 @@ const routes = [
   {
     menuName: "Generative Art",
     baseUrl: "/art",
-    pageTitle: "",
-  },
-  {
-    menuName: "Dev Portfolio",
-    baseUrl: "/portfolio",
-    pageTitle: "",
+    pageTitle: "Generative Artist and Creative Coder",
   },
   { menuName: "Contact", baseUrl: "/contact", pageTitle: "" },
   {
     menuName: "Home",
     baseUrl: "/",
-    pageTitle: "Software Engineer and Generative Artist",
+    pageTitle: "Generative Artist and Creative Coder",
   },
 ];
 
