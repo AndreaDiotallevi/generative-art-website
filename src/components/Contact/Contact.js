@@ -7,16 +7,9 @@ const Contact = () => {
       <div className="contact-container">
         <img className="profile-photo" src={profilePhoto} alt="Profile"></img>
         <div className="contact-overview-container">
-          <p>I am a software engineer and generative artist based in London.</p>
+          <p>I am a generative artist and creative coder based in London.</p>
           <p>
-            I have expertise in designing, implementing, and maintaining
-            full-stack applications with proficiency in Node, React, Python,
-            Git, CI/CD, and RESTful APIs. I have also experience collaborating
-            in modern software methodologies like test-driven development, pair
-            programming, code reviews and AGILE.
-          </p>
-          <p>
-            As a pianist and former architect, I am also fascinated by the
+            As a pianist and former architect, I am fascinated by the
             intersection between art and technology and I am in constant
             exploration of generative art concepts. For each new work, I design
             a custom algorithm capable of generating a sequence of unique, but
