@@ -10,7 +10,7 @@ This is a React single page application, showcasing my software development port
 
 ## Live Website
 
-The application is deployed with Netlify at my custom domain [www.andreadiotallevi.com](https://www.andreadiotallevi.com/).
+The application is deployed with Netlify at my custom domain [https://www.andreadiotalleviart.com](https://www.andreadiotalleviart.com).
 
 ## Getting Started
 
