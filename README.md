@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/AndreaDiotallevi/website.svg?style=shield)](https://circleci.com/gh/AndreaDiotallevi/andreadiotallevi.com) [![Test Coverage](https://api.codeclimate.com/v1/badges/3da069d854d6c628e1b1/test_coverage)](https://codeclimate.com/github/AndreaDiotallevi/andreadiotallevi.com/test_coverage)
+[![CircleCI](https://circleci.com/gh/AndreaDiotallevi/andreadiotalleviart.svg?style=shield)](https://circleci.com/gh/AndreaDiotallevi/andreadiotalleviart)
 
 # My Website
 
