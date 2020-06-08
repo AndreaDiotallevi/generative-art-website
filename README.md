@@ -6,7 +6,7 @@
 
 ## Description
 
-This is a React single page application showcasing my [generative art](https://github.com/AndreaDiotallevi/generative-art) experimentations.
+This is a React single page application showcasing my [generative art](https://github.com/AndreaDiotallevi/generative-art) and data visualisation experimentations.
 
 ## Live Website
 
