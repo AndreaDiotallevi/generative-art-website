@@ -1,5 +1,7 @@
-import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import React, { useState } from "react";
+import ReactGA from "react-ga";
+import { Router, Route } from "react-router-dom";
+import { createBrowserHistory } from "history";
 
 import Navbar from "../Navbar/Navbar";
 import PageTitle from "../PageTitle/PageTitle";
@@ -10,51 +12,53 @@ import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
 import Menu from "../Menu/Menu";
 
-class App extends React.Component {
-  state = {
-    menuOpen: false,
+ReactGA.initialize("UA-174250672-1");
+const history = createBrowserHistory();
+history.listen((location, action) => {
+  ReactGA.pageview(location.pathname + location.search);
+});
+
+const App = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleMenuClick = () => {
+    setMenuOpen(!menuOpen);
   };
 
-  handleMenuClick() {
-    this.setState({ menuOpen: !this.state.menuOpen });
-  }
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
 
-  handleLinkClick() {
-    this.setState({ menuOpen: false });
-  }
-
-  render() {
-    return (
-      <div className="app">
-        <BrowserRouter>
-          <Route
-            render={(routeProps) => (
-              <Navbar
-                {...routeProps}
-                open={this.state.menuOpen}
-                onClick={() => this.handleMenuClick()}
-              />
-            )}
-          />
-          <Route
-            render={(routeProps) => (
-              <Menu
-                {...routeProps}
-                open={this.state.menuOpen}
-                onClick={() => this.handleLinkClick()}
-              />
-            )}
-          />
-          <Route component={PageTitle} />
-          <Route path="/" exact component={Home} />
-          <Route path="/art" exact component={Artworks} />
-          <Route path="/art/:title" component={Artwork} />
-          <Route path="/contact" exact component={Contact} />
-          <Route component={Footer} />
-        </BrowserRouter>
-      </div>
-    );
-  }
-}
+  return (
+    <div className="app">
+      <Router history={history}>
+        <Route
+          render={(routeProps) => (
+            <Navbar
+              {...routeProps}
+              open={menuOpen}
+              onClick={() => handleMenuClick()}
+            />
+          )}
+        />
+        <Route
+          render={(routeProps) => (
+            <Menu
+              {...routeProps}
+              open={menuOpen}
+              onClick={() => handleLinkClick()}
+            />
+          )}
+        />
+        <Route component={PageTitle} />
+        <Route path="/" exact component={Home} />
+        <Route path="/portfolio" exact component={Artworks} />
+        <Route path="/portfolio/:title" component={Artwork} />
+        <Route path="/contact" exact component={Contact} />
+        <Route component={Footer} />
+      </Router>
+    </div>
+  );
+};
 
 export default App;
