@@ -9,7 +9,7 @@ const Artworks = () => {
         {artworks.map((artwork) => (
           <li className="artwork" key={artwork.id}>
             <Link
-              to={`/art/${artwork.title.replace(" ", "-")}`}
+              to={`/portfolio/${artwork.title.replace(" ", "-")}`}
               className="artwork-link"
             >
               <img
