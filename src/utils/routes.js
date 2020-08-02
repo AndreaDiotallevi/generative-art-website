@@ -1,7 +1,7 @@
 const routes = [
   {
     menuName: "Generative Art",
-    baseUrl: "/art",
+    baseUrl: "/portfolio",
     pageTitle: "Generative Artist and Creative Coder",
   },
   { menuName: "Contact", baseUrl: "/contact", pageTitle: "About Me" },
