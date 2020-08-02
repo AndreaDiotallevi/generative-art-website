@@ -641,8 +641,15 @@ body,
     margin-left: 20px;
   }
 
-  .navbar-title {
+  .navbar-title,
+  #artwork-page-title {
     font-size: 24px;
+  }
+
+  .page-title,
+  .project-name,
+  #home-page-title {
+    font-size: 16px;
   }
 
   #navbar-container,
@@ -676,13 +683,13 @@ body,
     margin-left: 15px;
   }
 
-  .navbar-title {
+  .navbar-title,
+  #artwork-page-title {
     font-size: 23px;
   }
 
   .page-title,
   .project-name,
-  #artwork-page-title,
   #home-page-title {
     font-size: 15px;
   }
@@ -723,7 +730,6 @@ body,
 
   .page-title,
   .project-name,
-  #artwork-page-title,
   #home-page-title {
     font-size: 14px;
   }
