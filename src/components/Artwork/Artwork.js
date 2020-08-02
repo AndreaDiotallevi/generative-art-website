@@ -1,45 +1,43 @@
-import React from "react";
+import React, { useEffect } from "react";
 import artworks from "../../utils/artworks";
 
-class Artwork extends React.Component {
-  title = this.props.match.params.title;
-  artwork = artworks.find(
-    (artwork) => artwork.title === this.title.replace("-", " ")
+const Artwork = (props) => {
+  const title = props.match.params.title;
+  const artwork = artworks.find(
+    (artwork) => artwork.title === title.replace("-", " ")
   );
 
-  componentDidMount() {
+  useEffect(() => {
     window.scrollTo(0, 0);
-  }
+  }, []);
 
-  renderImages() {
+  const renderImages = () => {
     let images = [];
-    for (let i = 0; i < this.artwork.variations; i++) {
+    for (let i = 0; i < artwork.variations; i++) {
       images.push(
         <img
-          key={`${this.title}-${i}`}
+          key={`${title}-${i}`}
           id={`artwork-page-image-${i}`}
           className="artwork-page-image"
-          src={require(`../../assets/${this.title}-${i}.png`)}
-          alt={this.title}
+          src={require(`../../assets/${title}-${i}.png`)}
+          alt={title}
         ></img>
       );
     }
     return images;
-  }
+  };
 
-  render() {
-    return (
-      <div id="artwork-component">
-        <div id="artwork-container">
-          <div id="artwork-page-images">{this.renderImages()}</div>
-          <div id="artwork-page-info">
-            <h3 id="artwork-page-title">{this.title.replace("-", " ")}</h3>
-            <p id="artwork-page-description">{this.artwork.description}</p>
-          </div>
+  return (
+    <div id="artwork-component">
+      <div id="artwork-container">
+        <div id="artwork-page-images">{renderImages()}</div>
+        <div id="artwork-page-info">
+          <h3 id="artwork-page-title">{title.replace("-", " ")}</h3>
+          <p id="artwork-page-description">{artwork.description}</p>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Artwork;
