@@ -12,7 +12,7 @@ import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
 import Menu from "../Menu/Menu";
 
-ReactGA.initialize("UA-174250672-1");
+ReactGA.initialize("UA-174252092-1");
 const history = createBrowserHistory();
 history.listen((location, action) => {
   ReactGA.pageview(location.pathname + location.search);
