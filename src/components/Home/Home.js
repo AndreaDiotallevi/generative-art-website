@@ -1,7 +1,7 @@
 import React from "react";
 import Moonlight from "../Moonlight/Moonlight";
 
-const Home = (props) => {
+const Home = () => {
   return (
     <div id="home-component">
       <div id="home-container">
