@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from "react-ga";
 import { Link } from "react-router-dom";
 import artworks from "../../utils/artworks";
 
@@ -11,6 +12,12 @@ const Artworks = () => {
             <Link
               to={`/portfolio/${artwork.title.replace(" ", "-")}`}
               className="artwork-link"
+              onClick={() => {
+                ReactGA.event({
+                  category: "portfolio",
+                  action: `click on ${artwork.title}`,
+                });
+              }}
             >
               <img
                 id={`artwork-image-${artwork.id}`}
